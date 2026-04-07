@@ -11,6 +11,7 @@
         .bg-ciclo-dark { background-color: #1A2E44; } 
         .text-ciclo-green { color: #417505; }
         .border-ciclo-green { border-color: #417505; }
+        .hero-gradient { background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%); }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -19,7 +20,6 @@
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="flex flex-col items-center md:items-start">
                 <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO" class="h-14 w-auto mb-1" onerror="this.src='https://i.ibb.co/VWVhZfX/logo-placeholder.png'">
-                
                 <span class="text-[10px] md:text-xs font-bold tracking-[0.15em] text-slate-500 uppercase text-center">
                     Engenharia Econômica e Gestão Técnica
                 </span>
@@ -30,18 +30,51 @@
         </div>
     </header>
 
-    <section class="pt-48 pb-24 px-6 bg-white">
-        <div class="container mx-auto text-center max-w-4xl">
+    <section class="pt-48 pb-16 px-6 hero-gradient">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h2 class="text-ciclo-green font-bold uppercase tracking-[0.3em] text-sm mb-6">Estruturação, Viabilização e Gestão Técnica</h2>
             <h1 class="text-4xl md:text-6xl font-extrabold mb-8 text-slate-900 leading-tight">
                 Prazo comprometido. Custo comprometido. <br>
-                <span class="text-red-600 font-light italic">Qualidade comprometida.</span>
+                <span class="text-red-600 font-light italic text-3xl md:text-5xl leading-relaxed">Qualidade comprometida.</span>
             </h1>
-            <p class="text-xl text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto">
-                A <strong>CICLO</strong> neutraliza as incertezas que destroem a rentabilidade de incorporadores e investidores através de controle técnico e previsibilidade absoluta.
+            <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+                Problemas recorrentes reduzem a rentabilidade e a reputação de construtoras e investidores com frequência preocupante. A <strong>CICLO</strong> nasceu para mudar este cenário.
             </p>
-            <a href="#cron" class="bg-[#417505] text-white px-10 py-5 rounded font-black hover:bg-green-700 transition uppercase text-sm tracking-[0.2em] shadow-xl">
-                Conhecer Sistema CRON
-            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white border-y">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4 italic text-blue-950">Desafios que destroem a margem do empreendimento</h3>
+                <div class="w-24 h-1 bg-ciclo-green mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-200 transition group shadow-sm">
+                    <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition">⏱</div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800 uppercase tracking-tight">Prazo Comprometido</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        O descumprimento do cronograma não é apenas um atraso; ele compromete <strong>receitas previstas</strong>, quebra contratos e desgasta a sua <strong>reputação</strong> perante os adquirentes e o mercado.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-green-200 transition group shadow-sm">
+                    <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition">💰</div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800 uppercase tracking-tight">Custo Comprometido</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Quantidades erradas, critérios mal definidos e imprevistos de obra <strong>corroem diretamente a margem líquida</strong>. Sem controle econômico, o lucro do investidor desaparece durante a execução.
+                    </p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-red-200 transition group shadow-sm">
+                    <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition">⚠️</div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-800 uppercase tracking-tight">Qualidade Comprometida</h4>
+                    <p class="text-slate-600 leading-relaxed text-sm">
+                        Retrabalhos e o não aceite por compradores geram <strong>custos elevados de manutenção pós-obra</strong>. Uma entrega deficiente drena o lucro futuro e fere a imagem da construtora.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -50,26 +83,30 @@
             <div>
                 <div class="inline-block border-l-4 border-[#417505] pl-4 mb-6">
                     <h2 class="text-sm font-black uppercase tracking-[0.4em] text-ciclo-green">Diferencial Incontestável</h2>
-                    <h3 class="text-5xl font-bold mt-2">Sistema CRON</h3>
+                    <h3 class="text-5xl font-bold mt-2 italic">Sistema CRON</h3>
                 </div>
                 <p class="text-xl text-slate-300 mb-6 italic leading-relaxed">
-                    Fruto de mestrado em <strong>Inteligência Artificial na PUC/RJ</strong> e validado em <strong>mais de 50 obras</strong> de grande escala.
+                    Fruto de mestrado em <strong>Inteligência Artificial na PUC/RJ</strong> e validado em <strong>mais de 50 obras</strong>.
                 </p>
-                <p class="text-slate-400 leading-relaxed">
-                    O CRON antecipa indicadores de risco e aciona replanejamentos de correção imediatos — antes que os desvios se tornem irreversíveis. Tecnologia proprietária para controle total do empreendimento.
+                <p class="text-slate-400 leading-relaxed mb-8">
+                    O CRON antecipa indicadores de risco e aciona replanejamentos de correção imediatos — antes que os desvios se tornem irreversíveis. Tecnologia proprietária para controle total e rastreabilidade.
                 </p>
+                <div class="flex items-center gap-4 text-ciclo-green font-bold">
+                    <span class="text-3xl">🤖</span>
+                    <span>IA aplicada à Engenharia Econômica</span>
+                </div>
             </div>
-            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl relative">
-                <div class="absolute -top-4 -right-4 bg-[#417505] text-white text-[10px] font-bold px-3 py-1 rounded shadow-lg">IA APLICADA</div>
+            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl">
+                <h4 class="text-white font-bold mb-8 uppercase tracking-widest text-sm text-center">Nossa Entrega de Valor</h4>
                 <ul class="space-y-6">
-                    <li class="flex items-center gap-4 border-b border-slate-700 pb-4">
+                    <li class="flex items-center gap-4 border-b border-slate-700 pb-4 hover:translate-x-2 transition">
                         <span class="text-green-500 font-bold text-xl">✓</span> <span>Maximiza a Rentabilidade Real</span>
                     </li>
-                    <li class="flex items-center gap-4 border-b border-slate-700 pb-4">
-                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Garante o Cronograma de Entrega</span>
+                    <li class="flex items-center gap-4 border-b border-slate-700 pb-4 hover:translate-x-2 transition">
+                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Garante a Previsibilidade de Prazo</span>
                     </li>
-                    <li class="flex items-center gap-4">
-                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Protege a Reputação no Mercado</span>
+                    <li class="flex items-center gap-4 hover:translate-x-2 transition">
+                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Blindagem da Reputação do Investidor</span>
                     </li>
                 </ul>
             </div>
@@ -88,9 +125,9 @@
                 <h2 class="text-4xl font-bold mb-2 leading-none text-[#1A2E44]">George Berliner</h2>
                 <p class="text-[#417505] font-black uppercase text-xs tracking-[0.3em] mb-8">Fundador e Diretor Geral</p>
                 <div class="space-y-5 text-slate-600 text-sm md:text-base leading-relaxed">
-                    <p><strong>Trajetória de Peso:</strong> Ex-Diretor Nacional de Informática da Caixa Econômica Federal e ex-Chefe do Departamento de Engenharia (RJ/ES).</p>
+                    <p><strong>Experiência Executiva:</strong> Ex-Diretor Nacional de Informática da Caixa Econômica Federal e ex-Chefe do Departamento de Engenharia (RJ/ES).</p>
                     <p>Mestre em Ciência da Computação (IA) pela <strong>PUC/RJ</strong> e Pós-graduado pela <strong>FGV</strong> em Avaliação de Empresas.</p>
-                    <p>Fundador da BEZON Engenharia e INVERRIO Incorporações, com dezenas de obras entregues nos setores público e privado.</p>
+                    <p>Fundador da BEZON Engenharia e INVERRIO Incorporações, com um histórico de dezenas de empreendimentos entregues com sucesso.</p>
                 </div>
             </div>
         </div>
@@ -98,13 +135,13 @@
 
     <footer id="contato" class="py-24 px-6 bg-[#1A2E44] text-white">
         <div class="container mx-auto text-center max-w-2xl">
-            <h2 class="text-3xl md:text-4xl font-bold mb-10 italic">Diagnóstico de 15 minutos sem compromisso.</h2>
-            
+            <h2 class="text-2xl md:text-3xl font-bold mb-10 italic">O seu empreendimento merece previsibilidade absoluta.</h2>
             <div class="bg-white text-slate-900 p-10 rounded-xl shadow-2xl inline-block w-full border-t-8 border-[#417505]">
+                <p class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-2 text-center">Diagnóstico de 15 Minutos</p>
                 <p class="text-2xl font-black mb-1">George Berliner</p>
                 <p class="text-blue-600 font-bold mb-8">21 98811-7150</p>
                 <a href="https://wa.me/5521988117150" target="_blank" class="block bg-[#417505] hover:bg-green-800 text-white font-black py-5 rounded transition uppercase tracking-widest text-sm shadow-lg">
-                    Chamar no WhatsApp
+                    Falar com Especialista agora
                 </a>
             </div>
             
