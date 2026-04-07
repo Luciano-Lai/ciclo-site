@@ -19,11 +19,18 @@
         .card-premium:hover { border-top-color: var(--ciclo-green); }
         .tracking-corporate { letter-spacing: 0.25em; }
         
+        /* Ajuste da logo para não distorcer */
         .logo-container img {
             height: 45px;
             width: auto;
             object-fit: contain;
         }
+
+        /* Customização da barra de scroll para manter o visual limpo */
+        .custom-scroll::-webkit-scrollbar { height: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .custom-scroll::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="bg-white antialiased">
@@ -69,19 +76,19 @@
                 <div class="card-premium pt-10">
                     <h3 class="serif text-3xl font-bold mb-8 text-slate-900">Inconsistência<br>de Prazo</h3>
                     <p class="text-slate-500 leading-relaxed text-[15px] font-light">
-                        Descumprimento de cronograma compromete receitas, contratos e a reputação junto aos investidores.
+                        O descumprimento de cronograma compromete o fluxo de caixa e gera passivos contratuais que degradam a percepção de valor.
                     </p>
                 </div>
                 <div class="card-premium pt-10">
                     <h3 class="serif text-3xl font-bold mb-8 text-slate-900">Erosão<br>de Margem</h3>
                     <p class="text-slate-500 leading-relaxed text-[15px] font-light">
-                        Falhas de quantificação e imprevistos técnicos que consomem a margem líquida projetada do ativo.
+                        Falhas de quantificação e falta de critérios rigorosos permitem que custos imprevistos consumam a rentabilidade.
                     </p>
                 </div>
                 <div class="card-premium pt-10">
                     <h3 class="serif text-3xl font-bold mb-8 text-slate-900">Deficiência<br>Técnica</h3>
                     <p class="text-slate-500 leading-relaxed text-[15px] font-light">
-                        Retrabalhos e custos de manutenção pós-obra que drenam o lucro e o LTV do empreendimento.
+                        Retrabalhos e manutenções pós-obra evidenciam falhas que drenam o LTV (Lifetime Value) dos ativos.
                     </p>
                 </div>
             </div>
@@ -112,27 +119,44 @@
     <section class="py-32 px-10 bg-white">
         <div class="container mx-auto max-w-6xl">
             <div class="text-center mb-16">
-                <span class="text-[10px] font-bold tracking-[0.3em] text-green-700 uppercase mb-4 block">Visualização Técnica</span>
-                <h2 class="serif text-4xl text-slate-900 italic">O Output da Engenharia Econômica</h2>
+                <span class="text-[10px] font-bold tracking-[0.3em] text-green-700 uppercase mb-4 block">Engenharia em Tempo Real</span>
+                <h2 class="serif text-4xl text-slate-900 italic">O Output da Gestão</h2>
             </div>
+
             <div class="relative mx-auto max-w-5xl">
-                <div class="bg-slate-900 p-4 rounded-t-xl flex items-center gap-2">
-                    <div class="flex gap-1.5"><div class="w-2 h-2 rounded-full bg-slate-700"></div><div class="w-2 h-2 rounded-full bg-slate-700"></div></div>
-                    <span class="text-[9px] text-slate-500 font-bold uppercase tracking-widest ml-4">CRON Dashboard — Relatório de Status do Ativo</span>
+                <div class="bg-slate-900 p-4 rounded-t-xl flex justify-between items-center border-b border-slate-700">
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+                            <div class="w-2 h-2 rounded-full bg-slate-700"></div>
+                        </div>
+                        <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest border-l border-slate-700 pl-4">Sistema CRON — Relatório de Ativos</span>
+                    </div>
+                    
+                    <a href="./DASHBOARD.pdf" target="_blank" class="flex items-center gap-2 text-[10px] text-white font-bold uppercase tracking-tighter bg-slate-800 px-3 py-1.5 rounded hover:bg-green-700 transition">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                        Zoom / Tela Cheia
+                    </a>
                 </div>
-                <div class="bg-slate-100 rounded-b-xl shadow-2xl border border-slate-200 overflow-hidden" style="height: 700px;">
-                    <iframe src="./DASHBOARD.pdf#toolbar=0&navpanes=0" width="100%" height="100%" style="border: none;"></iframe>
+                
+                <div class="bg-slate-100 rounded-b-xl shadow-2xl border border-slate-200 overflow-x-auto custom-scroll">
+                    <div style="min-width: 900px; height: 700px;">
+                        <iframe src="./DASHBOARD.pdf#view=FitH&toolbar=1" width="100%" height="100%" style="border: none;"></iframe>
+                    </div>
                 </div>
+                <p class="mt-4 text-center text-[10px] text-slate-400 font-bold uppercase tracking-widest italic">
+                    Use o scroll horizontal ou o botão zoom para ver detalhes em alta definição
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-10">
+    <section class="py-32 px-10 bg-slate-50">
         <div class="container mx-auto max-w-5xl">
             <div class="grid md:grid-cols-2 gap-24 items-center">
                 <div class="order-2 md:order-1 relative">
-                    <div class="absolute inset-0 border border-slate-100 translate-x-4 translate-y-4 -z-10"></div>
-                    <img src="./george.png" alt="George Berliner" class="w-full grayscale filter contrast-125 shadow-xl" onerror="this.src='https://via.placeholder.com/500x600?text=George+Berliner'">
+                    <div class="absolute inset-0 border border-slate-200 translate-x-4 translate-y-4 -z-10"></div>
+                    <img src="./george.png" alt="George Berliner" class="w-full grayscale filter contrast-125 shadow-xl rounded-sm" onerror="this.src='https://via.placeholder.com/500x600?text=George+Berliner'">
                 </div>
                 <div class="order-1 md:order-2">
                     <h2 class="serif text-4xl mb-6 text-slate-900 leading-tight">George Berliner</h2>
@@ -151,10 +175,10 @@
         <div class="container mx-auto max-w-3xl">
             <h2 class="serif text-3xl italic mb-16 leading-relaxed">Segurança técnica para decisões financeiras de alta performance.</h2>
             <div class="mb-12">
-                <p class="text-2xl font-bold mb-1 tracking-tight text-white">George Berliner</p>
+                <p class="text-2xl font-bold mb-1 tracking-tight">George Berliner</p>
                 <p class="text-slate-400 font-light text-sm">+55 21 98811-7150</p>
             </div>
-            <a href="https://wa.me/5521988117150" target="_blank" class="bg-white text-slate-900 px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-green-700 hover:text-white transition-all shadow-xl">
+            <a href="https://wa.me/5521988117150" target="_blank" class="bg-white text-slate-900 px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-green-700 hover:text-white transition-all shadow-2xl">
                 Agendar Diagnóstico Técnico
             </a>
             <div class="mt-40 text-[8px] text-slate-500 font-bold tracking-[0.8em] uppercase">
