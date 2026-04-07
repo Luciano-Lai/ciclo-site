@@ -20,7 +20,7 @@
             min-width: 160px; height: 55px; border-radius: 4px; 
         }
 
-        .section-space { padding: 100px 0; }
+        .section-space { padding: 120px 0; }
         
         /* Modal Style */
         .modal-open { overflow: hidden; }
@@ -32,6 +32,21 @@
             letter-spacing: 0.1em; transition: all 0.3s ease; display: inline-block;
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
+
+        /* Correção de Uniformidade nas Caixas do Ciclo */
+        .ciclo-card {
+            background: #f8fafc; padding: 2.5rem; border-radius: 0.75rem;
+            border: 1px solid #e2e8f0; transition: all 0.3s ease;
+        }
+        .ciclo-card.active { border-color: var(--ciclo-green); background: #ffffff; }
+
+        /* Correção de Uniformidade na Linha do Tempo */
+        .timeline-container { position: relative; padding-left: 2.5rem; border-left: 2px solid #e2e8f0; }
+        .timeline-dot { 
+            position: absolute; left: -11px; top: 0; width: 20px; height: 20px; 
+            background: white; border: 4px solid var(--ciclo-navy); border-radius: 50%;
+        }
+        .timeline-dot.highlight { border-color: var(--ciclo-green); }
     </style>
 </head>
 <body id="head" class="antialiased">
@@ -52,13 +67,13 @@
         </div>
     </header>
 
-    <section class="pt-48 pb-24 px-6 bg-slate-50">
-        <div class="container mx-auto max-w-5xl">
-            <h1 class="font-extrabold text-4xl md:text-6xl text-slate-900 leading-tight mb-12">
+    <section class="pt-48 pb-24 px-6 bg-slate-50 relative overflow-hidden">
+        <div class="container mx-auto max-w-5xl relative z-10">
+            <h1 class="font-extrabold text-4xl md:text-6xl text-slate-900 leading-tight mb-12 tracking-tight">
                 O tempo é o primeiro insumo a faltar. <br>
                 A falta desse recurso é o que mais impacta em uma obra.
             </h1>
-            <div class="space-y-8 text-2xl md:text-3xl text-slate-700 font-light leading-relaxed">
+            <div class="space-y-10 text-2xl md:text-3xl text-slate-700 font-light leading-relaxed max-w-4xl">
                 <p>
                     De nada adianta o <strong>suprimentos</strong> comprar barato se não houver <strong>logística</strong>. 
                     De nada adianta a <strong>obra</strong> querer pressa gastando rios de dinheiro com improviso e baixa produtividade.
@@ -66,7 +81,7 @@
                 <p class="font-medium text-slate-900">
                     Enquanto cada setor puxa para um lado, o lucro morre no meio do caminho.
                 </p>
-                <div class="h-1.5 w-24 bg-green-700 my-10"></div>
+                <div class="h-1.5 w-24 bg-green-700 my-12"></div>
                 <p>
                     Na <strong>CICLO</strong>, a <strong>Engenharia Econômica</strong> faz todos falarem a mesma língua: o <strong>CTO (Custo Total da Obra)</strong>.
                 </p>
@@ -78,83 +93,81 @@
         </div>
     </section>
 
-    <section id="ciclo" class="section-space px-6 bg-white border-b">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="serif text-4xl italic text-slate-900 mb-16 border-l-4 border-green-700 pl-6">A atuação da CICLO Engenharia em todo o Ciclo do Empreendimento</h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="p-8 bg-slate-50 rounded-lg">
-                    <span class="text-green-700 font-black text-2xl">01</span>
-                    <h4 class="font-bold uppercase text-[11px] tracking-widest my-4">Estudo e Viabilidade</h4>
-                    <p class="text-sm text-slate-600">Onde a meta do CTO nasce e o lucro é projetado.</p>
+    <section id="ciclo" class="section-space px-6 bg-white border-b border-slate-100">
+        <div class="container mx-auto max-w-7xl">
+            <div class="mb-24 border-l-4 border-green-700 pl-8">
+                <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-2">Convergência Total</span>
+                <h2 class="serif text-5xl md:text-6xl italic text-slate-900">O Ciclo do Empreendimento</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="ciclo-card">
+                    <span class="text-navy-corporate font-black text-3xl">01</span>
+                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Estudo e Viabilidade</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Onde a meta do CTO nasce e o lucro é projetado.</p>
                 </div>
-                <div class="p-8 bg-slate-50 rounded-lg">
-                    <span class="text-green-700 font-black text-2xl">02</span>
-                    <h4 class="font-bold uppercase text-[11px] tracking-widest my-4">Planejamento Técnico</h4>
-                    <p class="text-sm text-slate-600">Transformando tempo e logística em estratégia financeira.</p>
+                <div class="ciclo-card">
+                    <span class="text-navy-corporate font-black text-3xl">02</span>
+                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Planejamento Técnico</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Transformando tempo e logística em estratégia financeira.</p>
                 </div>
-                <div class="p-8 bg-green-700 text-white rounded-lg shadow-xl">
-                    <span class="text-green-300 font-black text-2xl">03</span>
-                    <h4 class="font-bold uppercase text-[11px] tracking-widest my-4">Execução e Cogestão</h4>
-                    <p class="text-sm text-green-50">Foco total no atingimento do CTO através do controle proativo.</p>
+                <div class="ciclo-card active shadow-2xl scale-105 border-green-600">
+                    <span class="text-green-700 font-black text-3xl">03</span>
+                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-green-700">Execução e Cogestão</h4>
+                    <p class="text-slate-700 text-sm leading-relaxed font-medium">Foco total no atingimento do CTO através do controle proativo.</p>
                 </div>
-                <div class="p-8 bg-slate-50 rounded-lg">
-                    <span class="text-green-700 font-black text-2xl">04</span>
-                    <h4 class="font-bold uppercase text-[11px] tracking-widest my-4">Entrega do Ativo</h4>
-                    <p class="text-sm text-slate-600">A concretização do lucro real e da qualidade técnica.</p>
+                <div class="ciclo-card">
+                    <span class="text-navy-corporate font-black text-3xl">04</span>
+                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Entrega do Ativo</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">A concretização do lucro real e da qualidade técnica.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="metodologia" class="section-space px-6 bg-navy-corporate text-white">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="serif text-5xl italic mb-12">Metodologia</h2>
-            <p class="text-xl text-slate-400 font-light mb-16 max-w-3xl">
-                A Engenharia Econômica utiliza o Ciclo PDCA para garantir que o CTO seja monitorado passo a passo, corrigindo desvios antes que impactem o resultado.
-            </p>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 bg-white/5 border border-white/10 rounded-xl">
-                    <h3 class="text-green-500 font-black text-3xl mb-4">P</h3>
-                    <p class="text-slate-200 leading-relaxed"><strong>Planejar:</strong> Planos de ação para o atingimento do CTO em curto, médio e longo prazo e identificação do caminho crítico.</p>
+        <div class="container mx-auto px-6 md:px-12 max-w-7xl">
+            <h2 class="serif text-6xl md:text-8xl mb-16 leading-none">O Ciclo <br><span class="italic text-green-500">PDCA</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-5xl">
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">P</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Planejar:</strong> Planos de ação para o atingimento do CTO em curto, médio e longo prazo e identificação dos caminho crítico.</p>
                 </div>
-                <div class="p-8 bg-white/5 border border-white/10 rounded-xl">
-                    <h3 class="text-green-500 font-black text-3xl mb-4">D</h3>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">D</h3>
                     <p class="text-slate-200 leading-relaxed"><strong>Executar:</strong> Coordenação integrada entre planejamento, orçamento, suprimentos, logística e a produção física na obra.</p>
                 </div>
-                <div class="p-8 bg-white/5 border border-white/10 rounded-xl">
-                    <h3 class="text-green-500 font-black text-3xl mb-4">C</h3>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">C</h3>
                     <p class="text-slate-200 leading-relaxed"><strong>Checar:</strong> Auditoria constante através de indicadores monitorados pelo Sistema CRON.</p>
                 </div>
-                <div class="p-8 bg-white/5 border border-white/10 rounded-xl">
-                    <h3 class="text-green-500 font-black text-3xl mb-4">A</h3>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl hover:bg-white/10 transition">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">A</h3>
                     <p class="text-slate-200 leading-relaxed"><strong>Agir:</strong> Correção proativa de rumos para neutralizar desvios antes que impactem a viabilidade.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cron" class="section-space px-6 bg-white border-b">
-        <div class="container mx-auto max-w-6xl">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="serif text-5xl italic mb-8">Sistema CRON</h2>
-                    <p class="text-lg text-slate-600 font-light leading-relaxed mb-10">
+    <section id="cron" class="section-space px-6 bg-white border-b border-slate-100">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-8">
+                    <div class="mb-12 border-l-4 border-green-700 pl-8">
+                        <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-2">Tecnologia Proprietária</span>
+                        <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Sistema CRON</h2>
+                    </div>
+                    <p class="text-xl text-slate-600 font-light leading-relaxed mb-10 max-w-4xl">
                         A tecnologia que ancora nossa Engenharia Econômica, monitorando o consumo do tempo e garantindo a convergência entre todos os setores da obra.
                     </p>
-                    <div class="flex gap-8">
-                        <div>
-                            <span class="block text-4xl font-bold text-slate-900">50+</span>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-green-700">Obras Cogestão Técnica</span>
-                        </div>
-                        <div>
-                            <span class="block text-4xl font-bold text-slate-900">20+</span>
-                            <span class="text-[10px] font-bold uppercase tracking-widest text-green-700">Anos Know-how Incorporação</span>
-                        </div>
-                    </div>
                 </div>
-                <div class="bg-slate-900 rounded-2xl p-4 shadow-2xl">
-                    <div class="aspect-video bg-slate-800 rounded-lg flex items-center justify-center text-slate-500 text-xs uppercase tracking-widest italic">
-                        Visualização Sistema CRON
+                <div class="lg:col-span-4 grid grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-xl">
+                        <span class="block text-5xl font-black text-slate-900">50+</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-green-700 italic">Obras <br>Cogestão Técnica</span>
+                    </div>
+                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-xl">
+                        <span class="block text-5xl font-black text-slate-900">20+</span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-green-700 italic">Anos Know-how <br>Incorporação</span>
                     </div>
                 </div>
             </div>
@@ -162,30 +175,33 @@
     </section>
 
     <section id="dashboard" class="section-space px-6 bg-slate-50">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h2 class="serif text-4xl italic mb-4">Transparência e Controle em Tempo Real</h2>
-            <p class="text-slate-500 mb-12 uppercase tracking-widest text-[10px] font-bold">Relatório de Atingimento do CTO (Real x Planejado)</p>
-            <div class="bg-white p-2 shadow-2xl rounded-xl border border-slate-200">
-                <iframe src="./DASHBOARD.pdf" width="100%" height="600px" class="rounded-lg"></iframe>
+        <div class="container mx-auto max-w-7xl text-center">
+            <div class="mb-16">
+                <span class="text-sm font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Transparência e Controle</span>
+                <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Dashboard de Cogestão</h2>
+            </div>
+            <div class="bg-white p-3 shadow-2xl rounded-xl border border-slate-200">
+                <iframe src="./DASHBOARD.pdf#view=FitH" width="100%" height="700px" class="rounded-lg border border-slate-100"></iframe>
             </div>
         </div>
     </section>
 
-    <section id="sobre" class="section-space px-6 bg-white">
-        <div class="container mx-auto max-w-5xl">
-            <div class="grid md:grid-cols-12 gap-16 items-center">
-                <div class="md:col-span-4">
-                    <img src="./image.png" alt="George Berliner" class="rounded-xl shadow-2xl grayscale">
+    <section id="sobre" class="section-space px-6 bg-white border-t border-slate-100">
+        <div class="container mx-auto max-w-7xl">
+            <div class="grid lg:grid-cols-12 gap-20 items-center">
+                <div class="lg:col-span-5 relative group">
+                    <div class="absolute -inset-6 bg-slate-100 rounded-[2rem] -z-10 group-hover:bg-green-50 transition duration-700"></div>
+                    <img src="./image.png" alt="George Berliner" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5] scale-100 group-hover:scale-105 transition duration-1000">
                 </div>
-                <div class="md:col-span-8 space-y-8">
+                <div class="lg:col-span-7 space-y-12">
                     <div>
-                        <h2 class="text-4xl font-black text-slate-900 uppercase">George Berliner</h2>
-                        <p class="text-green-700 font-bold uppercase tracking-widest text-sm mt-2">Fundador e Diretor Geral da CICLO Engenharia</p>
+                        <span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Autoridade Real</span>
+                        <h2 class="serif text-7xl md:text-8xl text-slate-900 leading-none">George Berliner</h2>
                     </div>
-                    <p class="serif text-2xl italic text-slate-600 leading-relaxed">
+                    <p class="text-4xl text-slate-600 font-light italic leading-relaxed">
                         "Transformamos o tempo em previsibilidade financeira, unificando os setores da obra sob a meta inegociável do CTO."
                     </p>
-                    <button onclick="abrirModal()" class="border-2 border-slate-900 px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition">
+                    <button onclick="abrirModal()" class="border-2 border-slate-900 px-10 py-5 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition rounded transform hover:-translate-y-1">
                         Acessar Trajetória Profissional
                     </button>
                 </div>
@@ -193,54 +209,73 @@
         </div>
     </section>
 
-    <div id="modal-trajetoria" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4">
-        <div class="absolute inset-0 bg-slate-900/90 backdrop-blur-sm" onclick="fecharModal()"></div>
-        <div class="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-xl relative z-10 p-10 shadow-2xl">
-            <button onclick="fecharModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-3xl">&times;</button>
+    <div id="modal-trajetoria" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
+        <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" onclick="fecharModal()"></div>
+        <div class="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 p-12 shadow-2xl border border-slate-100">
+            <button onclick="fecharModal()" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 text-3xl font-bold">&times;</button>
             
-            <h3 class="serif text-3xl italic mb-8 text-slate-900 border-b pb-4">Trajetória Profissional</h3>
+            <h3 class="serif text-4xl md:text-5xl italic mb-12 text-slate-900 border-b-2 pb-6 border-slate-100">Histórico de Autoridade Executiva</h3>
             
-            <div class="mb-12">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-green-700 mb-6">Formação Acadêmica</h4>
-                <ul class="space-y-3 text-slate-700">
-                    <li><strong>Engenharia Civil:</strong> Graduado</li>
-                    <li><strong>FGV:</strong> Pós em Avaliação de Empresas e Projetos</li>
-                    <li><strong>PUC/RJ:</strong> Mestre em Ciência da Computação (IA)</li>
-                    <li><strong>IAG-PUC/RJ:</strong> Docente na Área de Computação</li>
+            <div class="mb-16">
+                <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-green-700 mb-8">Formação Profissional</h4>
+                <ul class="space-y-4 text-slate-700 text-sm max-w-2xl">
+                    <li><strong class="text-slate-900">Engenharia Civil:</strong> Graduado</li>
+                    <li><strong class="text-slate-900">FGV:</strong> Pós em Avaliação de Empresas e Projetos</li>
+                    <li><strong class="text-slate-900">PUC/RJ:</strong> Mestre em Ciência da Computação (IA)</li>
+                    <li><strong class="text-slate-900">IAG-PUC/RJ:</strong> Docente na Área de Computação</li>
                 </ul>
             </div>
 
-            <div class="space-y-10">
-                <h4 class="text-[10px] font-black uppercase tracking-[0.3em] text-green-700 mb-6">Trajetória Executiva</h4>
-                <div class="border-l-2 border-slate-100 pl-6 relative">
-                    <h5 class="font-bold text-slate-900">Caixa Econômica Federal (Desde 1978)</h5>
-                    <p class="text-sm text-slate-600">Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</p>
-                </div>
-                <div class="border-l-2 border-slate-100 pl-6 relative">
-                    <h5 class="font-bold text-slate-900">BEZON Engenharia & INVERRIO (1993–2014)</h5>
-                    <p class="text-sm text-slate-600">Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</p>
-                </div>
-                <div class="border-l-2 border-green-700 pl-6 relative">
-                    <h5 class="font-bold text-slate-900">Edge Engenharia (2015–2022)</h5>
-                    <p class="text-sm text-slate-600 font-medium text-slate-900 uppercase">Fundador e Diretor Geral.</p>
-                </div>
-                <div class="border-l-2 border-slate-100 pl-6 relative">
-                    <h5 class="font-bold text-slate-900 italic">Artha Construções (2022–2025)</h5>
-                    <p class="text-sm text-slate-600">Gestão Financeira, Econômica e de Suprimentos focada no atingimento do CTO.</p>
+            <div class="space-y-0 relative">
+                <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-green-700 mb-10">Trajetória Executiva</h4>
+                <div class="space-y-0 timeline-container">
+                    
+                    <div class="pb-16 relative">
+                        <div class="timeline-dot highlight"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">Caixa Econômica Federal (Desde 1978)</h5>
+                        <p class="text-sm text-slate-600 mt-2">Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</p>
+                    </div>
+
+                    <div class="pb-16 relative">
+                        <div class="timeline-dot"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">BEZON Engenharia & INVERRIO (1993–2014)</h5>
+                        <p class="text-sm text-slate-600 mt-2">Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</p>
+                    </div>
+
+                    <div class="pb-16 relative">
+                        <div class="timeline-dot"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter border-b-2 border-slate-200 inline-block">Edge Engenharia (2015–2022)</h5>
+                        <p class="text-sm text-slate-600 font-medium text-slate-900 uppercase mt-3">Fundador e Diretor Geral.</p>
+                    </div>
+
+                    <div class="pb-6 relative">
+                        <div class="timeline-dot highlight"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter italic">Artha Construções (2022–2025)</h5>
+                        <p class="text-sm text-slate-600 font-medium text-slate-800 uppercase mt-3 p-5 bg-green-50 rounded-xl border border-green-100">
+                            Gestão Financeira, Econômica e de Suprimentos focada no atingimento do CTO.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="py-32 bg-navy-corporate text-white text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="serif text-5xl italic mb-12 text-slate-300">O CTO é o único destino inegociável.</h2>
-            <a href="https://wa.me/5521988117150" target="_blank" class="btn-cta">
-                QUERO ASSEGURAR O ATINGIMENTO DO CTO DA MINHA OBRA
-            </a>
-            <p class="mt-20 text-[9px] font-bold uppercase tracking-[0.5em] opacity-30">
-                CICLO ENGENHARIA ECONÔMICA © 2026
-            </p>
+    <footer class="py-40 bg-navy-corporate text-white text-center relative overflow-hidden">
+        <div class="absolute left-0 bottom-0 w-full h-1 bg-green-700"></div>
+        <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
+            <h2 class="serif text-5xl md:text-6xl italic mb-16 text-slate-300">O CTO é o único destino inegociável.</h2>
+            <div class="flex flex-col items-center gap-12">
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-cta text-sm px-20 transform hover:scale-105 rounded-2xl shadow-xl shadow-green-900/30">
+                    QUERO ASSEGURAR O ATINGIMENTO DO CTO DA MINHA OBRA
+                </a>
+                <div class="pt-24 border-t border-white/5 w-full flex flex-col md:flex-row justify-between gap-10 opacity-30 items-center">
+                    <span class="text-[9px] font-black uppercase tracking-[0.4em]">CICLO Engenharia Econômica © 2026</span>
+                    <div class="flex gap-10">
+                        <span class="text-[9px] font-black uppercase tracking-[0.4em]">Gestão Técnica</span>
+                        <span class="text-[9px] font-black uppercase tracking-[0.4em]">Sistema CRON</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
