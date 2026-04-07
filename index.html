@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CICLO | Engenharia Econômica e Gestão Técnica</title>
+    <title>CICLO | Engenharia Econômica e Cogestão Proativa</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --ciclo-green: #417505; --ciclo-navy: #1A2E44; --ciclo-dark: #0f172a; }
+        :root { --ciclo-green: #417505; --ciclo-navy: #1A2E44; }
         body { font-family: 'Inter', sans-serif; color: #1e293b; letter-spacing: -0.01em; }
         .serif { font-family: 'Playfair Display', serif; }
-        .sans-bold { font-family: 'Inter', sans-serif; font-weight: 700; }
         .bg-navy-corporate { background-color: var(--ciclo-navy); }
-        .card-premium { background: white; border-top: 4px solid #e2e8f0; transition: all 0.3s ease; }
+        .bg-silk { background-color: #f8fafc; }
+        .card-premium { 
+            background: white; 
+            border-top: 4px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
         .card-premium:hover { border-top-color: var(--ciclo-green); transform: translateY(-5px); }
         .tracking-corporate { letter-spacing: 0.25em; }
         .logo-container img { height: 48px; width: auto; filter: brightness(0) invert(1); }
         .custom-scroll::-webkit-scrollbar { height: 6px; }
-        .custom-scroll::-webkit-scrollbar-track { background: #1e293b; }
         .custom-scroll::-webkit-scrollbar-thumb { background: var(--ciclo-green); border-radius: 10px; }
     </style>
 </head>
@@ -27,22 +30,26 @@
         <div class="container mx-auto px-10 flex justify-between items-center">
             <div class="flex flex-col logo-container">
                 <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO" onerror="this.src='https://i.ibb.co/VWVhZfX/logo-placeholder.png'">
-                <span class="text-[9px] font-bold tracking-corporate text-slate-300 uppercase mt-2">Engenharia Econômica e Gestão Técnica</span>
+                <span class="text-[9px] font-bold tracking-corporate text-slate-300 uppercase mt-2">
+                    Engenharia Econômica e Gestão Técnica
+                </span>
             </div>
-            <a href="https://wa.me/5521988117150" target="_blank" class="text-[10px] font-bold uppercase tracking-widest text-white border-b-2 border-green-500 pb-1 hover:text-green-400 transition">Contato Direto</a>
+            <a href="https://wa.me/5521988117150" target="_blank" class="text-[10px] font-bold uppercase tracking-widest text-white border-b-2 border-green-500 pb-1 hover:text-green-400 transition">
+                Contato Direto
+            </a>
         </div>
     </header>
 
-    <section class="pt-64 pb-32 px-10 bg-slate-50 overflow-hidden relative border-b border-slate-200">
+    <section class="pt-64 pb-32 px-10 bg-silk overflow-hidden relative border-b border-slate-200">
         <div class="container mx-auto max-w-6xl relative z-10">
             <div class="flex flex-col md:flex-row items-center justify-between gap-12">
                 <div class="max-w-2xl">
-                    <h1 class="sans-bold text-5xl md:text-7xl text-slate-900 leading-tight mb-12 uppercase tracking-tighter">
-                        Prazo comprometido.<br>Custo comprometido.<br>Qualidade comprometida.
+                    <h1 class="font-bold text-5xl md:text-7xl text-slate-900 leading-tight mb-12 uppercase tracking-tighter">
+                        O tempo é o componente que mais afeta o orçamento.
                     </h1>
                     <div class="w-20 h-2 bg-green-700 mb-12"></div>
                     <p class="text-xl md:text-2xl text-slate-600 font-light leading-relaxed">
-                        Incertezas técnicas reduzem a rentabilidade. A <span class="text-navy-corporate font-bold italic underline decoration-green-600 underline-offset-8">CICLO</span> blinda a viabilidade financeira através de inteligência aplicada.
+                        Incertezas técnicas interrompem o <span class="text-navy-corporate font-bold italic">ciclo virtuoso</span> do capital. A CICLO garante a rentabilidade através da <span class="text-navy-corporate font-bold underline decoration-green-600 underline-offset-8">Cogestão Proativa</span>.
                     </p>
                 </div>
                 <div class="hidden md:block w-full max-w-sm opacity-[0.05] grayscale pointer-events-none">
@@ -52,63 +59,101 @@
         </div>
     </section>
 
+    <section class="py-32 px-10 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <span class="text-[10px] font-bold tracking-corporate text-green-700 uppercase mb-6 block">Nossa Diferença</span>
+                    <h2 class="serif text-4xl text-slate-900 mb-8 italic">Superando a Gestão Reativa</h2>
+                    <p class="text-slate-600 font-light leading-relaxed mb-6">
+                        A gestão qualitativa tradicional limita-se a dizer se um resultado foi bom ou ruim. É uma análise de efeito, feita quando o prejuízo já se consolidou.
+                    </p>
+                    <p class="text-slate-900 font-semibold leading-relaxed">
+                        A CICLO aplica a <strong>Cogestão Quantitativa</strong>: atuamos na gestão da qualidade dos processos em tempo real para garantir que o resultado planejado seja a única consequência possível.
+                    </p>
+                </div>
+                <div class="grid gap-6">
+                    <div class="card-premium p-8 shadow-sm">
+                        <h4 class="font-bold uppercase text-xs tracking-widest text-green-700 mb-2">Engenharia Econômica</h4>
+                        <p class="text-sm text-slate-500 font-light">Ciência aplicada para proteger o Ciclo de Vida do Empreendimento e maximizar o retorno do capital.</p>
+                    </div>
+                    <div class="card-premium p-8 shadow-sm">
+                        <h4 class="font-bold uppercase text-xs tracking-widest text-green-700 mb-2">Cogestão Proativa</h4>
+                        <p class="text-sm text-slate-500 font-light">Intervenção técnica nos indicadores (KPIs) antes que desvios de prazo destruam a margem de lucro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="py-32 bg-navy-corporate text-white">
         <div class="container mx-auto px-10 max-w-6xl">
             <div class="text-center mb-20">
-                <span class="text-[10px] font-bold tracking-corporate text-green-500 uppercase mb-4 block">Inteligência Artificial Aplicada</span>
-                <h2 class="serif text-5xl mb-6">Metodologia <span class="italic text-green-500">CRON</span></h2>
-                <p class="text-slate-400 max-w-2xl mx-auto font-light">Uma solução completa de Engenharia Econômica que integra desde o orçamento inicial até a gestão estratégica de KPIs em tempo real.</p>
+                <span class="text-[10px] font-bold tracking-corporate text-green-500 uppercase mb-4 block">Metodologia Científica</span>
+                <h2 class="serif text-5xl mb-6">O Sistema <span class="italic text-green-500">CRON</span></h2>
+                <p class="text-slate-400 max-w-3xl mx-auto font-light leading-relaxed">
+                    Não somos espectadores. Cogerimos a obra através do ciclo <strong>PDCA (Plan-Do-Check-Act)</strong>, utilizando Inteligência Artificial para antecipar restrições e dominar a variável tempo.
+                </p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white/5 p-8 border border-white/10 rounded-lg">
-                    <div class="text-green-500 serif italic text-3xl mb-6">01</div>
-                    <h4 class="sans-bold text-xl mb-4 uppercase text-white">Preparação</h4>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light">
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Definição de Quantidades:</strong> Precisão cirúrgica no levantamento para evitar estouro de orçamento.</li>
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Padrão de Qualidade:</strong> Estabelecimento de critérios técnicos antes do início da execução.</li>
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Baseline de Prazo:</strong> Cronograma mestre validado por algoritmos de viabilidade.</li>
-                    </ul>
+                    <div class="text-green-500 serif italic text-3xl mb-6">P</div>
+                    <h4 class="font-bold text-lg mb-4 uppercase text-white tracking-widest">Planejar</h4>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">
+                        Definição quantitativa de metas. Levantamento de quantidades e orçamentação de precisão para eliminar paradas por falta de definição técnica.
+                    </p>
                 </div>
 
                 <div class="bg-white/5 p-8 border border-white/10 rounded-lg">
-                    <div class="text-green-500 serif italic text-3xl mb-6">02</div>
-                    <h4 class="sans-bold text-xl mb-4 uppercase text-white">Execução Semanal</h4>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light">
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Metas Semanais:</strong> Quebra do cronograma em ciclos de 7 dias para controle absoluto.</li>
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Gestão de Restrições:</strong> Identificação antecipada de pendências que podem parar a obra.</li>
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Caminho Crítico:</strong> Monitoramento contínuo das atividades que impactam a entrega final.</li>
-                    </ul>
+                    <div class="text-green-500 serif italic text-3xl mb-6">D+C</div>
+                    <h4 class="font-bold text-lg mb-4 uppercase text-white tracking-widest">Executar + Checar</h4>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">
+                        Monitoramento de ciclos semanais e gestão de pendências técnicas. O CRON audita a qualidade do processo em tempo real, não o resultado final.
+                    </p>
                 </div>
 
                 <div class="bg-white/5 p-8 border border-white/10 rounded-lg">
-                    <div class="text-green-500 serif italic text-3xl mb-6">03</div>
-                    <h4 class="sans-bold text-xl mb-4 uppercase text-white">Engenharia Econômica</h4>
-                    <ul class="space-y-4 text-sm text-slate-300 font-light">
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Curva S Físico-Financeira:</strong> Visualização real do progresso versus investimento.</li>
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Monitoramento de Margem:</strong> Alertas imediatos sobre erosão de lucro durante a execução.</li>
-                        <li class="flex items-start gap-2"><span>•</span> <strong>Business Intelligence:</strong> Relatórios executivos formatados para tomada de decisão em nível de diretoria.</li>
-                    </ul>
+                    <div class="text-green-500 serif italic text-3xl mb-6">A</div>
+                    <h4 class="font-bold text-lg mb-4 uppercase text-white tracking-widest">Agir</h4>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed">
+                        Cogestão corretiva imediata. Se um KPI desvia, a ação é proativa para estancar a dilação do prazo e preservar o Custo Total da Obra (CTO).
+                    </p>
                 </div>
             </div>
 
-            <div class="mt-20 p-10 bg-green-900/10 border border-green-500/20 rounded-xl">
-                <div class="flex flex-col md:flex-row items-center justify-between gap-10">
-                    <div class="max-w-2xl">
-                        <h5 class="sans-bold text-xl text-green-500 mb-4 uppercase italic">O Diferencial Competitivo</h5>
-                        <p class="text-slate-300 font-light leading-relaxed">
-                            O Sistema CRON não é apenas um software de gestão; é o resultado de uma tese de mestrado em Inteligência Artificial na <strong>PUC/RJ</strong>. Ele utiliza modelos preditivos para antecipar gargalos e garantir que o <strong>Custo Total da Obra (CTO)</strong> e o <strong>Prazo</strong> sejam cumpridos rigorosamente.
-                        </p>
+            <div class="mt-20 p-10 bg-white/5 border border-white/10 rounded-xl flex flex-col md:flex-row items-center justify-between gap-10">
+                <div class="max-w-2xl">
+                    <h5 class="font-bold text-xl text-green-500 mb-4 uppercase italic">Ciclo Virtuoso do Capital</h5>
+                    <p class="text-slate-300 font-light leading-relaxed">
+                        Para o investidor, o lucro de um projeto é o impulso para o próximo. Garantimos que o prazo e o custo sejam cumpridos para que o ciclo de expansão do seu patrimônio nunca seja interrompido.
+                    </p>
+                </div>
+                <div class="text-center min-w-[150px]">
+                    <span class="block text-5xl font-bold text-white">50+</span>
+                    <span class="text-[9px] text-green-500 font-bold uppercase tracking-[0.3em]">Obras Cogeridas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-10 bg-slate-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <span class="text-[10px] font-bold tracking-[0.3em] text-green-700 uppercase mb-4 block">Visualização Quantitativa</span>
+                <h2 class="serif text-4xl text-slate-900 italic">O Output da Cogestão</h2>
+            </div>
+            <div class="relative mx-auto max-w-5xl shadow-2xl">
+                <div class="bg-navy-corporate p-4 rounded-t-xl flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="flex gap-1.5"><div class="w-2 h-2 rounded-full bg-green-500"></div><div class="w-2 h-2 rounded-full bg-slate-600"></div></div>
+                        <span class="text-[9px] text-slate-300 font-bold uppercase tracking-widest ml-4">Relatório Executivo CICLO</span>
                     </div>
-                    <div class="flex gap-10">
-                        <div class="text-center">
-                            <span class="block text-4xl sans-bold text-white">+50</span>
-                            <span class="text-[9px] text-green-500 font-bold uppercase tracking-widest">Obras Validadas</span>
-                        </div>
-                        <div class="text-center">
-                            <span class="block text-4xl sans-bold text-white">20+</span>
-                            <span class="text-[9px] text-green-500 font-bold uppercase tracking-widest">Anos de Mercado</span>
-                        </div>
+                    <a href="./DASHBOARD.pdf" target="_blank" class="text-[9px] text-white font-bold uppercase bg-green-700 px-4 py-2 rounded hover:bg-green-600 transition">Análise Completa</a>
+                </div>
+                <div class="bg-white rounded-b-xl border border-slate-200 overflow-x-auto custom-scroll">
+                    <div style="min-width: 1000px; height: 800px;">
+                        <iframe src="./DASHBOARD.pdf#view=FitH&toolbar=1" width="100%" height="100%" style="border: none;"></iframe>
                     </div>
                 </div>
             </div>
@@ -116,37 +161,19 @@
     </section>
 
     <section class="py-32 px-10 bg-white">
-        <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-16">
-                <span class="text-[10px] font-bold tracking-[0.3em] text-green-700 uppercase mb-4 block">Output Executivo</span>
-                <h2 class="serif text-4xl text-slate-900 italic">Dashboard de Gestão de Ativos</h2>
-            </div>
-            <div class="relative mx-auto max-w-5xl shadow-2xl">
-                <div class="bg-navy-corporate p-4 rounded-t-xl flex justify-between items-center">
-                    <div class="flex items-center gap-4"><div class="flex gap-1.5"><div class="w-2 h-2 rounded-full bg-green-500"></div><div class="w-2 h-2 rounded-full bg-slate-600"></div></div><span class="text-[9px] text-slate-300 font-bold uppercase tracking-widest ml-4">Relatório CRON em Tempo Real</span></div>
-                    <a href="./DASHBOARD.pdf" target="_blank" class="text-[9px] text-white font-bold uppercase bg-green-700 px-4 py-2 rounded hover:bg-green-600 transition">Ver PDF Completo</a>
-                </div>
-                <div class="bg-white rounded-b-xl border border-slate-200 overflow-x-auto custom-scroll">
-                    <div style="min-width: 1000px; height: 800px;"><iframe src="./DASHBOARD.pdf#view=FitH&toolbar=1" width="100%" height="100%" style="border: none;"></iframe></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-32 px-10 bg-slate-50">
         <div class="container mx-auto max-w-5xl">
             <div class="grid md:grid-cols-2 gap-24 items-center">
                 <div class="relative">
                     <div class="absolute inset-0 bg-navy-corporate translate-x-4 translate-y-4 -z-10 rounded-sm"></div>
-                    <img src="./george.png" alt="George Berliner" class="w-full grayscale filter contrast-125 shadow-2xl" onerror="this.src='https://via.placeholder.com/500x600?text=George+Berliner'">
+                    <img src="./george.png" alt="George Berliner" class="w-full grayscale filter contrast-125 shadow-2xl rounded-sm" onerror="this.src='https://via.placeholder.com/500x600?text=George+Berliner'">
                 </div>
                 <div>
                     <h2 class="serif text-4xl mb-6 text-slate-900 leading-tight">George Berliner</h2>
-                    <p class="text-[10px] font-bold tracking-corporate text-green-700 uppercase mb-10">Direção Geral</p>
+                    <p class="text-[10px] font-bold tracking-corporate text-green-700 uppercase mb-10 italic">Direção Geral</p>
                     <div class="space-y-6 text-[16px] text-slate-600 font-light leading-relaxed border-l-4 border-navy-corporate pl-8">
                         <p><strong>Ex-Diretor Nacional de Informática da Caixa Econômica Federal.</strong></p>
-                        <p>Mestre em Inteligência Artificial pela <strong>PUC/RJ</strong> e Pós-graduado pela <strong>FGV</strong>.</p>
-                        <p>Fundador da BEZON Engenharia e INVERRIO Incorporações, consolidou a CICLO como referência em Engenharia Econômica.</p>
+                        <p>Mestre em IA pela <strong>PUC/RJ</strong> e Pós-graduado pela <strong>FGV</strong>.</p>
+                        <p>Especialista em blindar a viabilidade econômica de ativos imobiliários através da aplicação proativa de dados e tecnologia.</p>
                     </div>
                 </div>
             </div>
@@ -160,8 +187,12 @@
                 <p class="text-2xl font-bold mb-1">George Berliner</p>
                 <p class="text-green-500 font-light text-sm">+55 21 98811-7150</p>
             </div>
-            <a href="https://wa.me/5521988117150" target="_blank" class="bg-green-700 text-white px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-green-600 transition-all shadow-2xl">Agendar Diagnóstico Técnico</a>
-            <div class="mt-40 text-[8px] text-slate-500 font-bold tracking-[0.8em] uppercase">CICLO ENGENHARIA ECONÔMICA © 2026</div>
+            <a href="https://wa.me/5521988117150" target="_blank" class="bg-green-700 text-white px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-green-600 transition-all shadow-2xl">
+                Agendar Diagnóstico Técnico
+            </a>
+            <div class="mt-40 text-[8px] text-slate-500 font-bold tracking-[0.8em] uppercase">
+                CICLO ENGENHARIA ECONÔMICA © 2026
+            </div>
         </div>
     </footer>
 
