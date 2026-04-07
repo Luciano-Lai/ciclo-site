@@ -5,149 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CICLO | Engenharia Econômica e Gestão Técnica</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .bg-ciclo-dark { background-color: #1A2E44; } 
-        .text-ciclo-green { color: #417505; }
-        .border-ciclo-green { border-color: #417505; }
-        .hero-gradient { background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%); }
+        .bg-ciclo-navy { background-color: #0F172A; } 
+        .accent-line { width: 40px; height: 2px; background-color: #417505; }
+        .hero-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .border-soft { border-color: rgba(0,0,0,0.06); }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-white text-slate-900 antialiased">
 
-    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-sm py-4 shadow-sm border-b">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex flex-col items-center md:items-start">
-                <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO" class="h-14 w-auto mb-1" onerror="this.src='https://i.ibb.co/VWVhZfX/logo-placeholder.png'">
-                <span class="text-[10px] md:text-xs font-bold tracking-[0.15em] text-slate-500 uppercase text-center">
+    <header class="fixed w-full z-50 bg-white/80 backdrop-blur-md py-4 border-b border-slate-100">
+        <div class="container mx-auto px-8 flex justify-between items-center">
+            <div class="flex flex-col">
+                <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO" class="h-12 w-auto mb-1" onerror="this.src='https://i.ibb.co/VWVhZfX/logo-placeholder.png'">
+                <span class="text-[9px] font-semibold tracking-[0.2em] text-slate-400 uppercase">
                     Engenharia Econômica e Gestão Técnica
                 </span>
             </div>
-            <a href="https://wa.me/5521988117150" target="_blank" class="bg-[#1A2E44] hover:bg-slate-700 text-white px-6 py-2 rounded font-bold text-xs transition uppercase tracking-widest shadow-md">
-                Agendar Diagnóstico
+            <nav class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="#cenario" class="hover:text-slate-900 transition">O Cenário</a>
+                <a href="#tecnologia" class="hover:text-slate-900 transition">Tecnologia</a>
+                <a href="#diretoria" class="hover:text-slate-900 transition">Diretoria</a>
+            </nav>
+            <a href="https://wa.me/5521988117150" target="_blank" class="border border-slate-900 px-6 py-2 rounded-sm text-[10px] font-bold uppercase tracking-widest hover:bg-slate-900 hover:text-white transition">
+                Contato
             </a>
         </div>
     </header>
 
-    <section class="pt-48 pb-16 px-6 hero-gradient">
-        <div class="container mx-auto text-center max-w-5xl">
-            <h2 class="text-ciclo-green font-bold uppercase tracking-[0.3em] text-sm mb-6">Estruturação, Viabilização e Gestão Técnica</h2>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-8 text-slate-900 leading-tight">
-                Prazo comprometido. Custo comprometido. <br>
-                <span class="text-red-600 font-light italic text-3xl md:text-5xl leading-relaxed">Qualidade comprometida.</span>
+    <section class="pt-52 pb-32 px-8 bg-[#FBFBFB]">
+        <div class="container mx-auto max-w-5xl text-left">
+            <div class="accent-line mb-8"></div>
+            <h1 class="text-4xl md:text-6xl font-light text-slate-900 leading-[1.1] mb-8 hero-shadow">
+                Prazo comprometido.<br>
+                Custo comprometido.<br>
+                <span class="font-bold">Qualidade comprometida.</span>
             </h1>
-            <p class="text-xl text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-                Problemas recorrentes reduzem a rentabilidade e a reputação de construtoras e investidores com frequência preocupante. A <strong>CICLO</strong> nasceu para mudar este cenário.
+            <p class="text-xl text-slate-500 font-light max-w-3xl leading-relaxed">
+                Desafios recorrentes que reduzem a rentabilidade e a reputação de construtoras, incorporadores e fundos. A <span class="text-slate-900 font-medium italic underline decoration-green-600 underline-offset-4">CICLO</span> nasceu para transformar incerteza técnica em previsibilidade financeira.
             </p>
         </div>
     </section>
 
-    <section class="py-20 bg-white border-y">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4 italic text-blue-950">Desafios que destroem a margem do empreendimento</h3>
-                <div class="w-24 h-1 bg-ciclo-green mx-auto"></div>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-blue-200 transition group shadow-sm">
-                    <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition">⏱</div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-800 uppercase tracking-tight">Prazo Comprometido</h4>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        O descumprimento do cronograma não é apenas um atraso; ele compromete <strong>receitas previstas</strong>, quebra contratos e desgasta a sua <strong>reputação</strong> perante os adquirentes e o mercado.
+    <section id="cenario" class="py-32 px-8 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-3 gap-16">
+                <div class="group">
+                    <svg class="w-8 h-8 mb-8 text-slate-300 group-hover:text-slate-900 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-slate-800">Inconsistência de Prazo</h3>
+                    <p class="text-[13px] text-slate-500 leading-relaxed font-light">
+                        O descumprimento de cronograma compromete o fluxo de caixa, gera passivos contratuais e degrada a percepção de valor perante investidores e adquirentes finais.
                     </p>
                 </div>
 
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-green-200 transition group shadow-sm">
-                    <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition">💰</div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-800 uppercase tracking-tight">Custo Comprometido</h4>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        Quantidades erradas, critérios mal definidos e imprevistos de obra <strong>corroem diretamente a margem líquida</strong>. Sem controle econômico, o lucro do investidor desaparece durante a execução.
+                <div class="group">
+                    <svg class="w-8 h-8 mb-8 text-slate-300 group-hover:text-slate-900 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                    </svg>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-slate-800">Erosão de Margem</h3>
+                    <p class="text-[13px] text-slate-500 leading-relaxed font-light">
+                        Falhas de quantificação e falta de critérios rigorosos permitem que custos imprevistos consumam a margem líquida projetada do ativo imobiliário.
                     </p>
                 </div>
 
-                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-red-200 transition group shadow-sm">
-                    <div class="text-4xl mb-4 grayscale group-hover:grayscale-0 transition">⚠️</div>
-                    <h4 class="text-xl font-bold mb-4 text-slate-800 uppercase tracking-tight">Qualidade Comprometida</h4>
-                    <p class="text-slate-600 leading-relaxed text-sm">
-                        Retrabalhos e o não aceite por compradores geram <strong>custos elevados de manutenção pós-obra</strong>. Uma entrega deficiente drena o lucro futuro e fere a imagem da construtora.
+                <div class="group">
+                    <svg class="w-8 h-8 mb-8 text-slate-300 group-hover:text-slate-900 transition-colors duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-1.006 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946 1.006 3.42 3.42 0 012.394 2.394 3.42 3.42 0 001.006 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-1.006 1.946 3.42 3.42 0 01-2.394 2.394 3.42 3.42 0 00-1.946 1.006 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-1.006 3.42 3.42 0 01-2.394-2.394 3.42 3.42 0 00-1.006-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 001.006-1.946 3.42 3.42 0 012.394-2.394z"></path>
+                    </svg>
+                    <h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-4 text-slate-800">Deficiência Técnica</h3>
+                    <p class="text-[13px] text-slate-500 leading-relaxed font-light">
+                        Retrabalhos e custos elevados de manutenção pós-obra evidenciam falhas de gestão que impactam diretamente a rentabilidade a longo prazo e o LTV do fundo.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cron" class="py-24 px-6 bg-slate-900 text-white">
-        <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <div class="inline-block border-l-4 border-[#417505] pl-4 mb-6">
-                    <h2 class="text-sm font-black uppercase tracking-[0.4em] text-ciclo-green">Diferencial Incontestável</h2>
-                    <h3 class="text-5xl font-bold mt-2 italic">Sistema CRON</h3>
+    <section id="tecnologia" class="py-32 px-8 bg-slate-950 text-white">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-24 items-center">
+                <div>
+                    <span class="text-[10px] font-bold tracking-[0.4em] text-blue-400 uppercase mb-4 block">Proprietary Algorithm</span>
+                    <h2 class="text-4xl font-light mb-8 italic">Sistema <span class="font-bold">CRON</span></h2>
+                    <p class="text-slate-400 font-light leading-relaxed mb-8">
+                        Desenvolvido como tese de mestrado em Inteligência Artificial na <span class="text-white">PUC/RJ</span> e validado em mais de 50 ativos de grande porte. O CRON utiliza IA para antecipar indicadores de risco, permitindo replanejamentos dinâmicos antes que os desvios se tornem irreversíveis.
+                    </p>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center gap-4 border-l border-slate-700 pl-6 py-2 transition hover:border-blue-500">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">01. Rastreabilidade Total</span>
+                        </div>
+                        <div class="flex items-center gap-4 border-l border-slate-700 pl-6 py-2 transition hover:border-blue-500">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">02. Controle Econômico-Financeiro</span>
+                        </div>
+                        <div class="flex items-center gap-4 border-l border-slate-700 pl-6 py-2 transition hover:border-blue-500">
+                            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">03. Gestão de Reputação de Ativos</span>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-xl text-slate-300 mb-6 italic leading-relaxed">
-                    Fruto de mestrado em <strong>Inteligência Artificial na PUC/RJ</strong> e validado em <strong>mais de 50 obras</strong>.
-                </p>
-                <p class="text-slate-400 leading-relaxed mb-8">
-                    O CRON antecipa indicadores de risco e aciona replanejamentos de correção imediatos — antes que os desvios se tornem irreversíveis. Tecnologia proprietária para controle total e rastreabilidade.
-                </p>
-                <div class="flex items-center gap-4 text-ciclo-green font-bold">
-                    <span class="text-3xl">🤖</span>
-                    <span>IA aplicada à Engenharia Econômica</span>
-                </div>
-            </div>
-            <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl">
-                <h4 class="text-white font-bold mb-8 uppercase tracking-widest text-sm text-center">Nossa Entrega de Valor</h4>
-                <ul class="space-y-6">
-                    <li class="flex items-center gap-4 border-b border-slate-700 pb-4 hover:translate-x-2 transition">
-                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Maximiza a Rentabilidade Real</span>
-                    </li>
-                    <li class="flex items-center gap-4 border-b border-slate-700 pb-4 hover:translate-x-2 transition">
-                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Garante a Previsibilidade de Prazo</span>
-                    </li>
-                    <li class="flex items-center gap-4 hover:translate-x-2 transition">
-                        <span class="text-green-500 font-bold text-xl">✓</span> <span>Blindagem da Reputação do Investidor</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 bg-white">
-        <div class="container mx-auto max-w-5xl flex flex-col md:flex-row gap-16 items-center">
-            <div class="w-full md:w-2/5">
-                <div class="relative">
-                    <div class="absolute -inset-4 border-2 border-[#417505] rounded-lg translate-x-2 translate-y-2 opacity-30"></div>
-                    <img src="./george.png" alt="George Berliner" class="relative z-10 w-full rounded shadow-2xl grayscale hover:grayscale-0 transition duration-700" onerror="this.src='https://via.placeholder.com/400x500?text=George+Berliner'">
-                </div>
-            </div>
-            <div class="w-full md:w-3/5">
-                <h2 class="text-4xl font-bold mb-2 leading-none text-[#1A2E44]">George Berliner</h2>
-                <p class="text-[#417505] font-black uppercase text-xs tracking-[0.3em] mb-8">Fundador e Diretor Geral</p>
-                <div class="space-y-5 text-slate-600 text-sm md:text-base leading-relaxed">
-                    <p><strong>Experiência Executiva:</strong> Ex-Diretor Nacional de Informática da Caixa Econômica Federal e ex-Chefe do Departamento de Engenharia (RJ/ES).</p>
-                    <p>Mestre em Ciência da Computação (IA) pela <strong>PUC/RJ</strong> e Pós-graduado pela <strong>FGV</strong> em Avaliação de Empresas.</p>
-                    <p>Fundador da BEZON Engenharia e INVERRIO Incorporações, com um histórico de dezenas de empreendimentos entregues com sucesso.</p>
+                <div class="bg-slate-900 border border-slate-800 p-16 text-center">
+                    <span class="text-slate-500 text-[10px] uppercase tracking-[0.3em]">Track Record</span>
+                    <div class="text-7xl font-bold my-6">+50</div>
+                    <p class="text-slate-400 text-xs font-light uppercase tracking-widest italic leading-relaxed">Empreendimentos Gerenciados sob Metodologia CRON</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contato" class="py-24 px-6 bg-[#1A2E44] text-white">
-        <div class="container mx-auto text-center max-w-2xl">
-            <h2 class="text-2xl md:text-3xl font-bold mb-10 italic">O seu empreendimento merece previsibilidade absoluta.</h2>
-            <div class="bg-white text-slate-900 p-10 rounded-xl shadow-2xl inline-block w-full border-t-8 border-[#417505]">
-                <p class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-2 text-center">Diagnóstico de 15 Minutos</p>
-                <p class="text-2xl font-black mb-1">George Berliner</p>
-                <p class="text-blue-600 font-bold mb-8">21 98811-7150</p>
-                <a href="https://wa.me/5521988117150" target="_blank" class="block bg-[#417505] hover:bg-green-800 text-white font-black py-5 rounded transition uppercase tracking-widest text-sm shadow-lg">
-                    Falar com Especialista agora
+    <section id="diretoria" class="py-32 px-8 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="flex flex-col md:flex-row items-center gap-20">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <div class="absolute inset-0 border border-slate-200 translate-x-4 translate-y-4 -z-10"></div>
+                        <img src="./george.png" alt="George Berliner" class="w-full grayscale shadow-xl" onerror="this.src='https://via.placeholder.com/600x700?text=George+Berliner'">
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-light text-slate-900 mb-2">George Berliner</h2>
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-[0.4em] mb-10 italic">Fundador & Diretor Geral</p>
+                    <div class="space-y-6 text-[14px] text-slate-500 font-light leading-relaxed">
+                        <p><strong>Ex-Diretor Nacional de Informática da Caixa Econômica Federal</strong>, com liderança sobre infraestrutura e sistemas de engenharia em escala nacional.</p>
+                        <p>Mestre em Ciência da Computação (Inteligência Artificial) pela <strong>PUC/RJ</strong> e Pós-graduado pela <strong>FGV</strong> em Avaliação de Empresas e Projetos.</p>
+                        <p>Com décadas de atuação, une o rigor técnico da engenharia civil à sofisticação estratégica da análise econômica, garantindo que cada empreendimento atinja seu potencial máximo de rentabilidade.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-32 px-8 bg-slate-50 border-t border-slate-100">
+        <div class="container mx-auto text-center max-w-3xl">
+            <h2 class="text-2xl font-light text-slate-900 mb-12 italic">Gestão Técnica para Investimentos de Alta Performance.</h2>
+            <div class="flex flex-col items-center">
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-10">Agendar Reunião Técnica de 15 Minutos</p>
+                
+                <a href="https://wa.me/5521988117150" target="_blank" class="group flex flex-col items-center">
+                    <div class="text-slate-900 mb-8 transition group-hover:text-blue-900">
+                        <p class="text-xl font-bold tracking-tight">George Berliner</p>
+                        <p class="text-sm font-light text-slate-400">+55 21 98811-7150</p>
+                    </div>
+                    <div class="bg-slate-900 text-white px-12 py-4 text-[11px] font-bold uppercase tracking-[0.3em] hover:bg-slate-800 transition-all shadow-xl">
+                        Solicitar Diagnóstico
+                    </div>
                 </a>
             </div>
             
-            <p class="mt-20 text-[10px] text-slate-500 uppercase tracking-[0.6em] font-bold">
-                CICLO ENGENHARIA ECONÔMICA E GESTÃO TÉCNICA © 2026
-            </p>
+            <div class="mt-40 pt-8 border-t border-slate-200">
+                <p class="text-[9px] text-slate-400 uppercase tracking-[0.6em] font-bold">
+                    CICLO ENGENHARIA ECONÔMICA E GESTÃO TÉCNICA © 2026
+                </p>
+            </div>
         </div>
     </footer>
 
