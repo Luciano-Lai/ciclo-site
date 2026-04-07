@@ -33,14 +33,16 @@
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
 
-        /* Correção de Uniformidade nas Caixas do Ciclo */
+        /* UNIFORMIDADE DAS CAIXAS DO CICLO - TODAS IGUAIS */
         .ciclo-card {
             background: #f8fafc; padding: 2.5rem; border-radius: 0.75rem;
             border: 1px solid #e2e8f0; transition: all 0.3s ease;
+            height: 100%;
         }
-        .ciclo-card.active { border-color: var(--ciclo-green); background: #ffffff; }
+        /* Destaque apenas por cor, sem mudar escala ou sombra */
+        .ciclo-card.active { border-color: var(--ciclo-green); }
 
-        /* Correção de Uniformidade na Linha do Tempo */
+        /* Linha do Tempo Uniforme */
         .timeline-container { position: relative; padding-left: 2.5rem; border-left: 2px solid #e2e8f0; }
         .timeline-dot { 
             position: absolute; left: -11px; top: 0; width: 20px; height: 20px; 
@@ -110,7 +112,7 @@
                     <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Planejamento Técnico</h4>
                     <p class="text-slate-600 text-sm leading-relaxed">Transformando tempo e logística em estratégia financeira.</p>
                 </div>
-                <div class="ciclo-card active shadow-2xl scale-105 border-green-600">
+                <div class="ciclo-card active">
                     <span class="text-green-700 font-black text-3xl">03</span>
                     <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-green-700">Execução e Cogestão</h4>
                     <p class="text-slate-700 text-sm leading-relaxed font-medium">Foco total no atingimento do CTO através do controle proativo.</p>
@@ -244,7 +246,7 @@
 
                     <div class="pb-16 relative">
                         <div class="timeline-dot"></div>
-                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter border-b-2 border-slate-200 inline-block">Edge Engenharia (2015–2022)</h5>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">Edge Engenharia (2015–2022)</h5>
                         <p class="text-sm text-slate-600 font-medium text-slate-900 uppercase mt-3">Fundador e Diretor Geral.</p>
                     </div>
 
