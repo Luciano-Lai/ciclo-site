@@ -18,15 +18,22 @@
         }
         .card-premium:hover { border-top-color: var(--ciclo-green); }
         .tracking-corporate { letter-spacing: 0.25em; }
+        
+        /* Ajuste fino para a logo não distorcer */
+        .logo-container img {
+            height: 45px; /* Altura fixa para manter o padrão, largura automática */
+            width: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body class="bg-white antialiased">
 
-    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-50 py-8">
+    <header class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-50 py-6">
         <div class="container mx-auto px-10 flex justify-between items-center">
-            <div class="flex flex-col">
-                <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO" class="h-10 w-auto mb-1" onerror="this.src='https://i.ibb.co/VWVhZfX/logo-placeholder.png'">
-                <span class="text-[9px] font-bold tracking-corporate text-slate-400 uppercase">
+            <div class="flex flex-col logo-container">
+                <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO" onerror="this.src='https://i.ibb.co/VWVhZfX/logo-placeholder.png'">
+                <span class="text-[9px] font-bold tracking-corporate text-slate-400 uppercase mt-2">
                     Engenharia Econômica e Gestão Técnica
                 </span>
             </div>
@@ -36,23 +43,31 @@
         </div>
     </header>
 
-    <section class="pt-64 pb-32 px-10 bg-silk">
-        <div class="container mx-auto max-w-6xl">
-            <div class="max-w-4xl">
-                <h1 class="serif text-5xl md:text-7xl text-slate-900 leading-tight mb-12">
-                    Prazo comprometido.<br>
-                    Custo comprometido.<br>
-                    <span class="italic font-light text-slate-400">Qualidade comprometida.</span>
-                </h1>
-                <div class="w-20 h-1 bg-green-700 mb-12"></div>
-                <p class="text-xl md:text-2xl text-slate-500 font-light leading-relaxed max-w-2xl">
-                    Problemas recorrentes que reduzem a rentabilidade e a reputação de construtoras, incorporadores e fundos. A <span class="text-slate-900 font-medium italic">CICLO</span> nasceu para mudar esse cenário.
-                </p>
+    <section class="pt-64 pb-32 px-10 bg-silk overflow-hidden relative">
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                
+                <div class="max-w-2xl">
+                    <h1 class="serif text-5xl md:text-7xl text-slate-900 leading-tight mb-12">
+                        Prazo comprometido.<br>
+                        Custo comprometido.<br>
+                        <span class="italic font-light text-slate-400">Qualidade comprometida.</span>
+                    </h1>
+                    <div class="w-20 h-1 bg-green-700 mb-12"></div>
+                    <p class="text-xl md:text-2xl text-slate-500 font-light leading-relaxed">
+                        Problemas recorrentes que reduzem a rentabilidade e a reputação de construtoras, incorporadores e fundos. A <span class="text-slate-900 font-medium italic underline decoration-green-600 underline-offset-8">CICLO</span> nasceu para mudar esse cenário.
+                    </p>
+                </div>
+
+                <div class="hidden md:block w-full max-w-sm opacity-[0.07] hover:opacity-10 transition-opacity duration-700">
+                    <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO Branding" class="w-full h-auto pointer-events-none">
+                </div>
+
             </div>
         </div>
     </section>
 
-    <section class="py-32 px-10">
+    <section class="py-32 px-10 border-y border-slate-50">
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-3 gap-16">
                 
@@ -114,13 +129,14 @@
     <section class="py-32 px-10">
         <div class="container mx-auto max-w-5xl">
             <div class="grid md:grid-cols-2 gap-24 items-center">
-                <div class="order-2 md:order-1">
-                    <img src="./george.png" alt="George Berliner" class="w-full grayscale filter contrast-125" onerror="this.src='https://via.placeholder.com/500x600?text=George+Berliner'">
+                <div class="order-2 md:order-1 relative">
+                    <div class="absolute inset-0 border border-slate-200 translate-x-4 translate-y-4 -z-10"></div>
+                    <img src="./george.png" alt="George Berliner" class="w-full grayscale filter contrast-125 shadow-xl" onerror="this.src='https://via.placeholder.com/500x600?text=George+Berliner'">
                 </div>
                 <div class="order-1 md:order-2">
                     <h2 class="serif text-4xl mb-6 text-slate-900 leading-tight">George Berliner</h2>
                     <p class="text-[10px] font-bold tracking-corporate text-slate-400 uppercase mb-10">Direção Geral</p>
-                    <div class="space-y-6 text-[15px] text-slate-500 font-light leading-relaxed">
+                    <div class="space-y-6 text-[15px] text-slate-500 font-light leading-relaxed border-l-2 border-green-700 pl-8">
                         <p><strong>Ex-Diretor Nacional de Informática da Caixa Econômica Federal.</strong></p>
                         <p>Mestre em IA pela <strong>PUC/RJ</strong> e Pós-graduado pela <strong>FGV</strong> em Avaliação de Empresas.</p>
                         <p>Fundador da BEZON Engenharia e INVERRIO Incorporações, consolidou a CICLO como referência em Engenharia Econômica para o mercado institucional.</p>
@@ -132,13 +148,13 @@
 
     <footer class="py-40 px-10 bg-slate-900 text-white text-center">
         <div class="container mx-auto max-w-3xl">
-            <h2 class="serif text-3xl md:text-4xl italic mb-16 leading-relaxed">Gostaria de ver como o Sistema CRON maximiza seus resultados?</h2>
+            <h2 class="serif text-3xl md:text-4xl italic mb-16 leading-relaxed">Segurança técnica para decisões financeiras de alta performance.</h2>
             <div class="flex flex-col items-center">
                 <div class="mb-12">
                     <p class="text-2xl font-bold mb-1 tracking-tight">George Berliner</p>
-                    <p class="text-slate-400 font-light">+55 21 98811-7150</p>
+                    <p class="text-slate-400 font-light text-sm">+55 21 98811-7150</p>
                 </div>
-                <a href="https://wa.me/5521988117150" target="_blank" class="bg-white text-slate-900 px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-green-700 hover:text-white transition-all">
+                <a href="https://wa.me/5521988117150" target="_blank" class="bg-white text-slate-900 px-12 py-5 text-[10px] font-bold uppercase tracking-[0.3em] hover:bg-green-700 hover:text-white transition-all shadow-2xl">
                     Agendar Diagnóstico Técnico
                 </a>
             </div>
