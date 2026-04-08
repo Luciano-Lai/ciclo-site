@@ -33,6 +33,43 @@
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
         
+        /* Botão padrão para WhatsApp em todas as seções */
+        .btn-whatsapp {
+            background: var(--ciclo-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #356004;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(65, 117, 5, 0.3);
+        }
+        
+        .btn-whatsapp-outline {
+            background: transparent;
+            color: var(--ciclo-green);
+            border: 2px solid var(--ciclo-green);
+            padding: 0.875rem 1.875rem;
+        }
+        
+        .btn-whatsapp-outline:hover {
+            background: var(--ciclo-green);
+            color: white;
+        }
+        
         /* Botão do header */
         .btn-whatsapp-header {
             background: var(--ciclo-green);
@@ -49,6 +86,7 @@
             gap: 0.5rem;
             border: none;
             cursor: pointer;
+            text-decoration: none;
         }
         
         .btn-whatsapp-header:hover {
@@ -257,6 +295,41 @@
                 max-width: 90%;
             }
         }
+        
+        /* Estilos para a seção Nossos Clientes */
+        .client-tag {
+            background: #f1f5f9;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--ciclo-navy);
+            transition: all 0.3s ease;
+        }
+        
+        .client-tag:hover {
+            background: var(--ciclo-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        .benefit-item {
+            background: #f8fafc;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--ciclo-navy);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            border-color: var(--ciclo-green);
+            background: white;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body id="head" class="antialiased">
@@ -273,6 +346,7 @@
                 <a href="#cron" class="nav-link text-slate-400 hover:text-white">Sistema CRON</a>
                 <a href="#dashboard" class="nav-link text-slate-400 hover:text-white">Dashboard</a>
                 <a href="#sobre" class="nav-link text-slate-400 hover:text-white">Sobre Nós</a>
+                <a href="#clientes" class="nav-link text-slate-400 hover:text-white">Nossos Clientes</a>
             </nav>
             <!-- Botão WhatsApp no header -->
             <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp-header">
@@ -284,6 +358,7 @@
         </div>
     </header>
 
+    <!-- SEÇÃO HERO COM BOTÃO -->
     <section class="pt-48 pb-24 px-6 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <h1 class="font-extrabold text-4xl md:text-6xl text-slate-900 leading-tight mb-12 tracking-tight">
@@ -306,6 +381,15 @@
                     O tempo não é o vilão — ele é o recurso que revela quem realmente está focado no resultado. 
                     A CICLO entende que o <strong>CTO é inegociável</strong>.
                 </p>
+            </div>
+            <!-- Botão Hero -->
+            <div class="mt-12">
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                    </svg>
+                    Quero saber mais sobre Engenharia Econômica
+                </a>
             </div>
         </div>
     </section>
@@ -379,6 +463,15 @@
                     <p class="text-xl text-slate-600 font-light leading-relaxed max-w-3xl">
                         A tecnologia que ancora nossa Engenharia Econômica, monitorando o consumo do tempo e garantindo a convergência entre todos os setores da obra.
                     </p>
+                    <!-- Botão Sistema CRON -->
+                    <div class="mt-10">
+                        <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                            </svg>
+                            Quero conhecer o Sistema CRON
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="lg:col-span-5">
@@ -406,6 +499,15 @@
             </div>
             <div class="bg-white p-3 shadow-2xl rounded-xl border border-slate-200">
                 <iframe src="./DASHBOARD.pdf#view=FitH" width="100%" height="700px" class="rounded-lg border border-slate-100"></iframe>
+            </div>
+            <!-- Botão Dashboard -->
+            <div class="mt-10">
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                    </svg>
+                    Quero esse Dashboard
+                </a>
             </div>
         </div>
     </section>
@@ -438,6 +540,53 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO NOSSOS CLIENTES -->
+    <section id="clientes" class="section-space px-6 bg-slate-50">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Parceiros Estratégicos</span>
+                <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Nossos Clientes</h2>
+                <div class="w-20 h-1 bg-green-700 mx-auto mt-6"></div>
+            </div>
+            
+            <!-- Lista de clientes -->
+            <div class="flex flex-wrap justify-center gap-4 mb-20">
+                <span class="client-tag">Construtoras</span>
+                <span class="client-tag">Incorporadoras</span>
+                <span class="client-tag">Investidores</span>
+                <span class="client-tag">Fundos de Investimentos</span>
+            </div>
+            
+            <!-- O que nossos clientes recebem -->
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">O que nossos clientes recebem</h3>
+                    <div class="w-16 h-0.5 bg-green-700 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                    <div class="benefit-item">Prazo</div>
+                    <div class="benefit-item">Custo</div>
+                    <div class="benefit-item">Qualidade</div>
+                    <div class="benefit-item">Controle</div>
+                    <div class="benefit-item">Previsibilidade</div>
+                    <div class="benefit-item">Rentabilidade</div>
+                    <div class="benefit-item">Reputação</div>
+                </div>
+                
+                <!-- Botão Quero ser cliente -->
+                <div class="text-center mt-12">
+                    <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                        </svg>
+                        Quero ser cliente
+                    </a>
                 </div>
             </div>
         </div>
