@@ -32,6 +32,45 @@
             letter-spacing: 0.1em; transition: all 0.3s ease; display: inline-block;
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
+        
+        /* Botão do header */
+        .btn-whatsapp-header {
+            background: var(--ciclo-green);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-whatsapp-header:hover {
+            background: #356004;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(65, 117, 5, 0.3);
+        }
+        
+        /* Menu de navegação com fonte maior */
+        .nav-link {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-link {
+                font-size: 0.8rem;
+            }
+        }
 
         /* UNIFORMIDADE ABSOLUTA DAS CAIXAS - TODAS IGUAIS */
         .ciclo-card {
@@ -206,23 +245,42 @@
             font-weight: 400;
             color: #334155;
         }
+        
+        /* Ajuste para a foto do George - tamanho reduzido */
+        .george-image {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .george-image {
+                max-width: 90%;
+            }
+        }
     </style>
 </head>
 <body id="head" class="antialiased">
 
-    <header class="fixed w-full z-50 bg-navy-corporate py-4 shadow-xl">
+    <header class="fixed w-full z-50 bg-navy-corporate py-3 shadow-xl">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="logo-box">
                 <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO ENGENHARIA" class="max-h-full w-auto">
             </div>
             <nav class="hidden lg:flex gap-8 items-center">
-                <a href="#head" class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-green-500">Home</a>
-                <a href="#ciclo" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">O Ciclo</a>
-                <a href="#metodologia" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Metodologia</a>
-                <a href="#cron" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sistema CRON</a>
-                <a href="#dashboard" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Dashboard</a>
-                <a href="#sobre" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sobre Nós</a>
+                <a href="#head" class="nav-link text-white hover:text-green-500">Home</a>
+                <a href="#ciclo" class="nav-link text-slate-400 hover:text-white">O Ciclo</a>
+                <a href="#metodologia" class="nav-link text-slate-400 hover:text-white">Metodologia</a>
+                <a href="#cron" class="nav-link text-slate-400 hover:text-white">Sistema CRON</a>
+                <a href="#dashboard" class="nav-link text-slate-400 hover:text-white">Dashboard</a>
+                <a href="#sobre" class="nav-link text-slate-400 hover:text-white">Sobre Nós</a>
             </nav>
+            <!-- Botão WhatsApp no header -->
+            <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38zm4.6-6.29c-.25-.12-1.47-.72-1.7-.8-.23-.09-.4-.12-.57.12-.17.24-.66.8-.81.97-.15.16-.3.18-.55.06-.25-.12-1.06-.39-2.02-1.25-.75-.67-1.25-1.49-1.4-1.74-.15-.25-.02-.38.11-.5.12-.12.27-.3.4-.45.13-.15.18-.26.27-.44.09-.18.04-.33-.02-.46-.06-.13-.57-1.37-.78-1.87-.2-.49-.41-.42-.57-.43-.14-.01-.3-.01-.46-.01-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/>
+                </svg>
+                Entrar em Contato
+            </a>
         </div>
     </header>
 
@@ -354,10 +412,10 @@
 
     <section id="sobre" class="section-space px-6 bg-white border-t border-slate-100">
         <div class="container mx-auto max-w-7xl">
-            <div class="grid lg:grid-cols-12 gap-16 items-center">
-                <div class="lg:col-span-5 relative group">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 relative group flex justify-center">
                     <div class="absolute -inset-6 bg-slate-100 rounded-[2rem] -z-10 group-hover:bg-green-50 transition duration-700"></div>
-                    <img src="./image.png" alt="George Berliner" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]">
+                    <img src="./image.png" alt="George Berliner" class="george-image rounded-2xl shadow-2xl object-cover aspect-[4/5]">
                 </div>
                 
                 <div class="lg:col-span-7 space-y-8">
