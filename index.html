@@ -52,19 +52,19 @@
             font-size: 10px;
             letter-spacing: 0.1em;
             margin: 1.25rem 0;
-            color: #1e293b; /* slate-900 padrão para todas */
+            color: #1e293b;
         }
         
         /* Número padronizado para todas as caixas */
         .ciclo-card .card-number {
             font-weight: 900;
-            font-size: 1.875rem; /* text-3xl */
-            color: var(--ciclo-navy); /* navy padrão para todas */
+            font-size: 1.875rem;
+            color: var(--ciclo-navy);
         }
         
         /* Texto descritivo padronizado */
         .ciclo-card p {
-            color: #475569; /* slate-600 padrão */
+            color: #475569;
             font-size: 0.875rem;
             line-height: 1.625;
         }
@@ -75,6 +75,45 @@
             box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
             border-color: var(--ciclo-green);
             background: #ffffff;
+        }
+
+        /* Cards de estatísticas do CRON */
+        .stat-card {
+            background: #f8fafc;
+            padding: 2rem 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+            border-color: var(--ciclo-green);
+            background: #ffffff;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--ciclo-navy);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ciclo-green);
+            line-height: 1.4;
         }
 
         /* Linha do Tempo Uniforme no Modal */
@@ -137,28 +176,24 @@
                 <h2 class="serif text-5xl md:text-6xl italic text-slate-900">O Ciclo do Empreendimento</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- CAIXA 01 - PADRÃO UNIFORME -->
                 <div class="ciclo-card">
                     <span class="card-number">01</span>
                     <h4>Estudo e Viabilidade</h4>
                     <p>Onde a meta do CTO nasce e o lucro é projetado.</p>
                 </div>
                 
-                <!-- CAIXA 02 - PADRÃO UNIFORME -->
                 <div class="ciclo-card">
                     <span class="card-number">02</span>
                     <h4>Planejamento Técnico</h4>
                     <p>Transformando tempo e logística em estratégia financeira.</p>
                 </div>
                 
-                <!-- CAIXA 03 - PADRÃO UNIFORME (CORRIGIDA) -->
                 <div class="ciclo-card">
                     <span class="card-number">03</span>
                     <h4>Execução e Cogestão</h4>
                     <p>Foco total no atingimento do CTO através do controle proativo.</p>
                 </div>
                 
-                <!-- CAIXA 04 - PADRÃO UNIFORME -->
                 <div class="ciclo-card">
                     <span class="card-number">04</span>
                     <h4>Entrega do Ativo</h4>
@@ -192,26 +227,33 @@
         </div>
     </section>
 
+    <!-- SEÇÃO SISTEMA CRON CORRIGIDA -->
     <section id="cron" class="section-space px-6 bg-white border-b border-slate-100">
         <div class="container mx-auto max-w-7xl">
-            <div class="grid lg:grid-cols-12 gap-16 items-center">
-                <div class="lg:col-span-8">
+            <div class="grid lg:grid-cols-12 gap-16 items-start">
+                <div class="lg:col-span-7">
                     <div class="mb-12 border-l-4 border-green-700 pl-8">
                         <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-2">Tecnologia Proprietária</span>
                         <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Sistema CRON</h2>
                     </div>
-                    <p class="text-xl text-slate-600 font-light leading-relaxed mb-10 max-w-4xl">
+                    <p class="text-xl text-slate-600 font-light leading-relaxed max-w-3xl">
                         A tecnologia que ancora nossa Engenharia Econômica, monitorando o consumo do tempo e garantindo a convergência entre todos os setores da obra.
                     </p>
                 </div>
-                <div class="lg:col-span-4 grid grid-cols-2 gap-6">
-                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-xl">
-                        <span class="block text-5xl font-black text-slate-900">50+</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-green-700 italic">Obras <br>Cogestão Técnica</span>
-                    </div>
-                    <div class="bg-slate-50 p-8 rounded-xl border border-slate-100 shadow-xl">
-                        <span class="block text-5xl font-black text-slate-900">20+</span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-green-700 italic">Anos Know-how <br>Incorporação</span>
+                
+                <div class="lg:col-span-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <!-- Card 1: 50+ Obras -->
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Obras.<br>Experiência acumulada em cogestão técnica.</div>
+                        </div>
+                        
+                        <!-- Card 2: 20+ Anos -->
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Anos.<br>Know-how em mercado de engenharia e incorporação.</div>
+                        </div>
                     </div>
                 </div>
             </div>
