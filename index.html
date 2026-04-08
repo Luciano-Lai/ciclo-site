@@ -33,14 +33,49 @@
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
 
-        /* UNIFORMIDADE ABSOLUTA DAS CAIXAS */
+        /* UNIFORMIDADE ABSOLUTA DAS CAIXAS - TODAS IGUAIS */
         .ciclo-card {
-            background: #f8fafc; padding: 2.5rem; border-radius: 0.75rem;
-            border: 1px solid #e2e8f0; transition: all 0.3s ease;
-            height: 100%; display: flex; flex-direction: column;
+            background: #f8fafc;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
-        /* Destaque sutil apenas por cor de borda e texto */
-        .ciclo-card.active { border-color: var(--ciclo-green); background: #ffffff; }
+        
+        /* Título padronizado para todas as caixas */
+        .ciclo-card h4 {
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            margin: 1.25rem 0;
+            color: #1e293b; /* slate-900 padrão para todas */
+        }
+        
+        /* Número padronizado para todas as caixas */
+        .ciclo-card .card-number {
+            font-weight: 900;
+            font-size: 1.875rem; /* text-3xl */
+            color: var(--ciclo-navy); /* navy padrão para todas */
+        }
+        
+        /* Texto descritivo padronizado */
+        .ciclo-card p {
+            color: #475569; /* slate-600 padrão */
+            font-size: 0.875rem;
+            line-height: 1.625;
+        }
+        
+        /* Efeito hover sutil e uniforme */
+        .ciclo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
+            border-color: var(--ciclo-green);
+            background: #ffffff;
+        }
 
         /* Linha do Tempo Uniforme no Modal */
         .timeline-container { position: relative; padding-left: 2.5rem; border-left: 2px solid #e2e8f0; }
@@ -102,25 +137,32 @@
                 <h2 class="serif text-5xl md:text-6xl italic text-slate-900">O Ciclo do Empreendimento</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- CAIXA 01 - PADRÃO UNIFORME -->
                 <div class="ciclo-card">
-                    <span class="text-navy-corporate font-black text-3xl">01</span>
-                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Estudo e Viabilidade</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Onde a meta do CTO nasce e o lucro é projetado.</p>
+                    <span class="card-number">01</span>
+                    <h4>Estudo e Viabilidade</h4>
+                    <p>Onde a meta do CTO nasce e o lucro é projetado.</p>
                 </div>
+                
+                <!-- CAIXA 02 - PADRÃO UNIFORME -->
                 <div class="ciclo-card">
-                    <span class="text-navy-corporate font-black text-3xl">02</span>
-                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Planejamento Técnico</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">Transformando tempo e logística em estratégia financeira.</p>
+                    <span class="card-number">02</span>
+                    <h4>Planejamento Técnico</h4>
+                    <p>Transformando tempo e logística em estratégia financeira.</p>
                 </div>
-                <div class="ciclo-card active">
-                    <span class="text-green-700 font-black text-3xl">03</span>
-                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-green-700">Execução e Cogestão</h4>
-                    <p class="text-slate-700 text-sm leading-relaxed font-medium">Foco total no atingimento do CTO através do controle proativo.</p>
-                </div>
+                
+                <!-- CAIXA 03 - PADRÃO UNIFORME (CORRIGIDA) -->
                 <div class="ciclo-card">
-                    <span class="text-navy-corporate font-black text-3xl">04</span>
-                    <h4 class="font-bold uppercase text-[10px] tracking-widest my-5 text-slate-900">Entrega do Ativo</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">A concretização do lucro real e da qualidade técnica.</p>
+                    <span class="card-number">03</span>
+                    <h4>Execução e Cogestão</h4>
+                    <p>Foco total no atingimento do CTO através do controle proativo.</p>
+                </div>
+                
+                <!-- CAIXA 04 - PADRÃO UNIFORME -->
+                <div class="ciclo-card">
+                    <span class="card-number">04</span>
+                    <h4>Entrega do Ativo</h4>
+                    <p>A concretização do lucro real e da qualidade técnica.</p>
                 </div>
             </div>
         </div>
