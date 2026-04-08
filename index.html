@@ -116,13 +116,96 @@
             line-height: 1.4;
         }
 
-        /* Linha do Tempo Uniforme no Modal */
-        .timeline-container { position: relative; padding-left: 2.5rem; border-left: 2px solid #e2e8f0; }
-        .timeline-dot { 
-            position: absolute; left: -11px; top: 0; width: 20px; height: 20px; 
-            background: white; border: 4px solid var(--ciclo-navy); border-radius: 50%;
+        /* Citação estilizada para o perfil */
+        .citation-role {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--ciclo-green);
+            margin-bottom: 1rem;
         }
-        .timeline-dot.highlight { border-color: var(--ciclo-green); }
+        
+        .citation-main {
+            font-size: 2rem;
+            line-height: 1.3;
+            font-weight: 300;
+            font-style: italic;
+            color: #334155;
+            margin-bottom: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .citation-main {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* ESTILOS UNIFORMES PARA O MODAL - SEM FORMATAÇÕES DIFERENTES DENTRO DE CADA PARTE */
+        .modal-section-title {
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--ciclo-green);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        /* Lista de formação acadêmica - UNIFORME */
+        .academic-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .academic-list li {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #334155;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .academic-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Lista de trajetória executiva - UNIFORME */
+        .timeline-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .timeline-list li {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #334155;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .timeline-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* Texto padrão para todos os itens - sem negritos ou itálicos internos */
+        .uniform-text {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #334155;
+            font-weight: 400;
+        }
+        
+        /* Remove qualquer formatação especial dentro das listas */
+        .timeline-list li strong,
+        .academic-list li strong,
+        .uniform-text strong {
+            font-weight: 400;
+            color: #334155;
+        }
     </style>
 </head>
 <body id="head" class="antialiased">
@@ -227,7 +310,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO SISTEMA CRON CORRIGIDA -->
     <section id="cron" class="section-space px-6 bg-white border-b border-slate-100">
         <div class="container mx-auto max-w-7xl">
             <div class="grid lg:grid-cols-12 gap-16 items-start">
@@ -243,13 +325,11 @@
                 
                 <div class="lg:col-span-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- Card 1: 50+ Obras -->
                         <div class="stat-card">
                             <div class="stat-number">50+</div>
                             <div class="stat-label">Obras.<br>Experiência acumulada em cogestão técnica.</div>
                         </div>
                         
-                        <!-- Card 2: 20+ Anos -->
                         <div class="stat-card">
                             <div class="stat-number">20+</div>
                             <div class="stat-label">Anos.<br>Know-how em mercado de engenharia e incorporação.</div>
@@ -274,74 +354,65 @@
 
     <section id="sobre" class="section-space px-6 bg-white border-t border-slate-100">
         <div class="container mx-auto max-w-7xl">
-            <div class="grid lg:grid-cols-12 gap-20 items-center">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
                 <div class="lg:col-span-5 relative group">
                     <div class="absolute -inset-6 bg-slate-100 rounded-[2rem] -z-10 group-hover:bg-green-50 transition duration-700"></div>
                     <img src="./image.png" alt="George Berliner" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]">
                 </div>
-                <div class="lg:col-span-7 space-y-12">
+                
+                <div class="lg:col-span-7 space-y-8">
                     <div>
-                        <span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Autoridade Real</span>
-                        <h2 class="serif text-7xl md:text-8xl text-slate-900 leading-none">George Berliner</h2>
+                        <span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Sobre Nós</span>
+                        <h2 class="serif text-6xl md:text-7xl text-slate-900 leading-none">George Berliner</h2>
                     </div>
-                    <p class="text-4xl text-slate-600 font-light italic leading-relaxed">
+                    
+                    <div class="citation-role">
+                        Fundador e Diretor Geral da CICLO Engenharia
+                    </div>
+                    
+                    <div class="citation-main">
                         "Transformamos o tempo em previsibilidade financeira, unificando os setores da obra sob a meta inegociável do CTO."
-                    </p>
-                    <button onclick="abrirModal()" class="border-2 border-slate-900 px-10 py-5 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition rounded transform hover:-translate-y-1">
-                        Acessar Trajetória Profissional
+                    </div>
+                    
+                    <button onclick="abrirModal()" class="group relative inline-flex items-center gap-3 border-2 border-slate-900 px-10 py-5 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all duration-300 rounded transform hover:-translate-y-1 overflow-hidden">
+                        <span class="relative z-10">Acessar Trajetória Profissional</span>
+                        <svg class="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- MODAL DE TRAJETÓRIA PROFISSIONAL - TOTALMENTE UNIFORME -->
     <div id="modal-trajetoria" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
         <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" onclick="fecharModal()"></div>
-        <div class="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 p-12 shadow-2xl border border-slate-100">
-            <button onclick="fecharModal()" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 text-3xl font-bold">&times;</button>
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 p-10 shadow-2xl border border-slate-100">
+            <button onclick="fecharModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-3xl font-bold transition-colors">&times;</button>
             
-            <h3 class="serif text-4xl md:text-5xl italic mb-12 text-slate-900 border-b-2 pb-6 border-slate-100">Histórico de Autoridade Executiva</h3>
+            <h3 class="serif text-4xl md:text-5xl italic mb-8 text-slate-900">Histórico de Autoridade Executiva</h3>
             
-            <div class="mb-16">
-                <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-green-700 mb-8">Formação Profissional</h4>
-                <ul class="space-y-4 text-slate-700 text-sm max-w-2xl">
-                    <li><strong class="text-slate-900">Engenharia Civil:</strong> Graduado</li>
-                    <li><strong class="text-slate-900">FGV:</strong> Pós em Avaliação de Empresas e Projetos</li>
-                    <li><strong class="text-slate-900">PUC/RJ:</strong> Mestre em Ciência da Computação (IA)</li>
-                    <li><strong class="text-slate-900">IAG-PUC/RJ:</strong> Docente na Área de Computação</li>
+            <!-- FORMAÇÃO ACADÊMICA -->
+            <div class="mb-10">
+                <h4 class="modal-section-title">Formação Acadêmica</h4>
+                <ul class="academic-list">
+                    <li>Engenharia Civil: Graduado.</li>
+                    <li>FGV: Pós em Avaliação de Empresas e Projetos.</li>
+                    <li>PUC/RJ: Mestre em Ciência da Computação (IA).</li>
+                    <li>IAG-PUC/RJ: Docente na Área de Computação.</li>
                 </ul>
             </div>
 
-            <div class="space-y-0 relative">
-                <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-green-700 mb-10">Trajetória Executiva</h4>
-                <div class="space-y-0 timeline-container">
-                    
-                    <div class="pb-16 relative">
-                        <div class="timeline-dot highlight"></div>
-                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">Caixa Econômica Federal (Desde 1978)</h5>
-                        <p class="text-sm text-slate-600 mt-2">Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</p>
-                    </div>
-
-                    <div class="pb-16 relative">
-                        <div class="timeline-dot"></div>
-                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">BEZON Engenharia & INVERRIO (1993–2014)</h5>
-                        <p class="text-sm text-slate-600 mt-2">Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</p>
-                    </div>
-
-                    <div class="pb-16 relative">
-                        <div class="timeline-dot"></div>
-                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">Edge Engenharia (2015–2022)</h5>
-                        <p class="text-sm text-slate-600 font-medium text-slate-900 uppercase mt-3">Fundador e Diretor Geral.</p>
-                    </div>
-
-                    <div class="pb-6 relative">
-                        <div class="timeline-dot highlight"></div>
-                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter italic">Artha Construções (2022–2025)</h5>
-                        <p class="text-sm text-slate-600 font-medium text-slate-800 uppercase mt-3 p-5 bg-green-50 rounded-xl border border-green-100">
-                            Gestão Financeira, Econômica e de Suprimentos focada no atingimento do CTO.
-                        </p>
-                    </div>
-                </div>
+            <!-- TRAJETÓRIA EXECUTIVA -->
+            <div>
+                <h4 class="modal-section-title">Trajetória Executiva</h4>
+                <ul class="timeline-list">
+                    <li>Caixa Econômica Federal (Desde 1978): Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</li>
+                    <li>BEZON Engenharia & INVERRIO (1993–2014): Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</li>
+                    <li>Edge Engenharia (2015–2022): Fundador e Diretor Geral.</li>
+                    <li>Artha Construções (2022–2025): Gestão Financeira, Econômica e de Suprimentos focada no atingimento do CTO.</li>
+                </ul>
             </div>
         </div>
     </div>
