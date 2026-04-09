@@ -7,23 +7,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { 
-            --ciclo-green: #417505; 
-            --ciclo-navy: #1A2E44;
-            --ciclo-cream: #F5F2E8;
-            --ciclo-light-gray: #E8EDE4;
-            --ciclo-sage: #8A9A7A;
-            --ciclo-dark-slate: #2C3E50;
-        }
+        :root { --ciclo-green: #417505; --ciclo-navy: #1A2E44; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; color: #1e293b; background-color: #ffffff; }
         .serif { font-family: 'Playfair Display', serif; }
         
         .bg-navy-corporate { background-color: var(--ciclo-navy); }
         .text-green-ciclo { color: var(--ciclo-green); }
-        .bg-cream { background-color: var(--ciclo-cream); }
-        .bg-light-gray { background-color: var(--ciclo-light-gray); }
-        .bg-sage { background-color: var(--ciclo-sage); }
         
         .logo-box { 
             background: #fff; padding: 8px 16px; display: flex; align-items: center; justify-content: center; 
@@ -42,75 +32,10 @@
             letter-spacing: 0.1em; transition: all 0.3s ease; display: inline-block;
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
-        
-        /* Botão padrão para WhatsApp em todas as seções */
-        .btn-whatsapp {
-            background: var(--ciclo-green);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-weight: 700;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        .btn-whatsapp:hover {
-            background: #356004;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -5px rgba(65, 117, 5, 0.3);
-        }
-        
-        /* Botão do header */
-        .btn-whatsapp-header {
-            background: var(--ciclo-green);
-            color: white;
-            padding: 0.6rem 1.25rem;
-            border-radius: 2rem;
-            font-weight: 700;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        
-        .btn-whatsapp-header:hover {
-            background: #356004;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(65, 117, 5, 0.3);
-        }
-        
-        /* Menu de navegação com fonte maior */
-        .nav-link {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: color 0.3s ease;
-        }
-        
-        @media (min-width: 1024px) {
-            .nav-link {
-                font-size: 0.8rem;
-            }
-        }
 
         /* UNIFORMIDADE ABSOLUTA DAS CAIXAS - TODAS IGUAIS */
         .ciclo-card {
-            background: #ffffff;
+            background: #f8fafc;
             padding: 2.5rem;
             border-radius: 0.75rem;
             border: 1px solid #e2e8f0;
@@ -154,7 +79,7 @@
 
         /* Cards de estatísticas do CRON */
         .stat-card {
-            background: #ffffff;
+            background: #f8fafc;
             padding: 2rem 1.5rem;
             border-radius: 0.75rem;
             border: 1px solid #e2e8f0;
@@ -216,137 +141,48 @@
             }
         }
 
-        /* ESTILOS UNIFORMES PARA O MODAL */
-        .modal-section-title {
-            font-size: 0.7rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: var(--ciclo-green);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid #e2e8f0;
+        /* Timeline do Modal - Design completo */
+        .timeline-container { 
+            position: relative; 
+            padding-left: 2.5rem; 
+            border-left: 2px solid #e2e8f0; 
         }
         
-        .academic-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .timeline-dot { 
+            position: absolute; 
+            left: -11px; 
+            top: 0; 
+            width: 20px; 
+            height: 20px; 
+            background: white; 
+            border: 4px solid var(--ciclo-navy); 
+            border-radius: 50%;
         }
         
-        .academic-list li {
-            font-size: 0.875rem;
-            line-height: 1.6;
-            color: #334155;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
-        
-        .academic-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .timeline-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .timeline-list li {
-            font-size: 0.875rem;
-            line-height: 1.6;
-            color: #334155;
-            padding: 1rem 0;
-            border-bottom: 1px solid #f1f5f9;
-        }
-        
-        .timeline-list li:last-child {
-            border-bottom: none;
-        }
-        
-        .george-image {
-            max-width: 85%;
-            margin: 0 auto;
-        }
-        
-        @media (min-width: 1024px) {
-            .george-image {
-                max-width: 90%;
-            }
-        }
-        
-        .client-tag {
-            background: #ffffff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 2rem;
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: var(--ciclo-navy);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .client-tag:hover {
-            background: var(--ciclo-green);
-            color: white;
-            transform: translateY(-2px);
-            border-color: var(--ciclo-green);
-        }
-        
-        .benefit-item {
-            background: #ffffff;
-            padding: 1rem 1.5rem;
-            border-radius: 0.75rem;
-            border: 1px solid #e2e8f0;
-            font-weight: 600;
-            font-size: 0.875rem;
-            color: var(--ciclo-navy);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .benefit-item:hover {
-            border-color: var(--ciclo-green);
-            background: var(--ciclo-green);
-            color: white;
-            transform: translateY(-2px);
-        }
-        
-        /* Novo estilo para o dashboard */
-        .dashboard-container {
-            background: linear-gradient(135deg, var(--ciclo-navy) 0%, var(--ciclo-dark-slate) 100%);
-            border-radius: 1rem;
-            padding: 2rem;
+        .timeline-dot.highlight { 
+            border-color: var(--ciclo-green); 
         }
     </style>
 </head>
 <body id="head" class="antialiased">
 
-    <header class="fixed w-full z-50 bg-navy-corporate py-3 shadow-xl">
+    <header class="fixed w-full z-50 bg-navy-corporate py-4 shadow-xl">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="logo-box">
                 <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO ENGENHARIA" class="max-h-full w-auto">
             </div>
             <nav class="hidden lg:flex gap-8 items-center">
-                <a href="#head" class="nav-link text-white hover:text-green-500">Home</a>
-                <a href="#ciclo" class="nav-link text-slate-300 hover:text-white">O Ciclo</a>
-                <a href="#metodologia" class="nav-link text-slate-300 hover:text-white">Metodologia</a>
-                <a href="#cron" class="nav-link text-slate-300 hover:text-white">Sistema CRON</a>
-                <a href="#dashboard" class="nav-link text-slate-300 hover:text-white">Dashboard</a>
-                <a href="#sobre" class="nav-link text-slate-300 hover:text-white">Sobre Nós</a>
-                <a href="#clientes" class="nav-link text-slate-300 hover:text-white">Nossos Clientes</a>
+                <a href="#head" class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-green-500">Home</a>
+                <a href="#ciclo" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">O Ciclo</a>
+                <a href="#metodologia" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Metodologia</a>
+                <a href="#cron" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sistema CRON</a>
+                <a href="#dashboard" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Dashboard</a>
+                <a href="#sobre" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sobre Nós</a>
             </nav>
-            <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp-header">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
-                </svg>
-                Entrar em Contato
-            </a>
         </div>
     </header>
 
-    <!-- SEÇÃO HERO - Fundo creme -->
-    <section class="pt-48 pb-24 px-6 bg-cream relative overflow-hidden">
+    <section class="pt-48 pb-24 px-6 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <h1 class="font-extrabold text-4xl md:text-6xl text-slate-900 leading-tight mb-12 tracking-tight">
                 O tempo é o primeiro insumo a faltar. <br>
@@ -369,18 +205,9 @@
                     A CICLO entende que o <strong>CTO é inegociável</strong>.
                 </p>
             </div>
-            <div class="mt-12">
-                <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99z"/>
-                    </svg>
-                    Quero saber mais sobre Engenharia Econômica
-                </a>
-            </div>
         </div>
     </section>
 
-    <!-- SEÇÃO CICLO - Fundo branco -->
     <section id="ciclo" class="section-space px-6 bg-white border-b border-slate-100">
         <div class="container mx-auto max-w-7xl">
             <div class="mb-24 border-l-4 border-green-700 pl-8">
@@ -388,29 +215,58 @@
                 <h2 class="serif text-5xl md:text-6xl italic text-slate-900">O Ciclo do Empreendimento</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="ciclo-card"><span class="card-number">01</span><h4>Estudo e Viabilidade</h4><p>Onde a meta do CTO nasce e o lucro é projetado.</p></div>
-                <div class="ciclo-card"><span class="card-number">02</span><h4>Planejamento Técnico</h4><p>Transformando tempo e logística em estratégia financeira.</p></div>
-                <div class="ciclo-card"><span class="card-number">03</span><h4>Execução e Cogestão</h4><p>Foco total no atingimento do CTO através do controle proativo.</p></div>
-                <div class="ciclo-card"><span class="card-number">04</span><h4>Entrega do Ativo</h4><p>A concretização do lucro real e da qualidade técnica.</p></div>
+                <div class="ciclo-card">
+                    <span class="card-number">01</span>
+                    <h4>Estudo e Viabilidade</h4>
+                    <p>Onde a meta do CTO nasce e o lucro é projetado.</p>
+                </div>
+                
+                <div class="ciclo-card">
+                    <span class="card-number">02</span>
+                    <h4>Planejamento Técnico</h4>
+                    <p>Transformando tempo e logística em estratégia financeira.</p>
+                </div>
+                
+                <div class="ciclo-card">
+                    <span class="card-number">03</span>
+                    <h4>Execução e Cogestão</h4>
+                    <p>Foco total no atingimento do CTO através do controle proativo.</p>
+                </div>
+                
+                <div class="ciclo-card">
+                    <span class="card-number">04</span>
+                    <h4>Entrega do Ativo</h4>
+                    <p>A concretização do lucro real e da qualidade técnica.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO METODOLOGIA - Fundo navy -->
     <section id="metodologia" class="section-space px-6 bg-navy-corporate text-white">
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
             <h2 class="serif text-6xl md:text-8xl mb-16 leading-none">O Ciclo <br><span class="italic text-green-500">PDCA</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-5xl">
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">P</h3><p class="text-slate-200 leading-relaxed"><strong>Planejar:</strong> Planos de ação para o atingimento do CTO em curto, médio e longo prazo e identificação dos caminho crítico.</p></div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">D</h3><p class="text-slate-200 leading-relaxed"><strong>Executar:</strong> Coordenação integrada entre planejamento, orçamento, suprimentos, logística e a produção física na obra.</p></div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">C</h3><p class="text-slate-200 leading-relaxed"><strong>Checar:</strong> Auditoria constante através de indicadores monitorados pelo Sistema CRON.</p></div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">A</h3><p class="text-slate-200 leading-relaxed"><strong>Agir:</strong> Correção proativa de rumos para neutralizar desvios antes que impactem a viabilidade.</p></div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">P</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Planejar:</strong> Planos de ação para o atingimento do CTO em curto, médio e longo prazo e identificação dos caminho crítico.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">D</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Executar:</strong> Coordenação integrada entre planejamento, orçamento, suprimentos, logística e a produção física na obra.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">C</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Checar:</strong> Auditoria constante através de indicadores monitorados pelo Sistema CRON.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">A</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Agir:</strong> Correção proativa de rumos para neutralizar desvios antes que impactem a viabilidade.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SISTEMA CRON - Fundo light gray -->
-    <section id="cron" class="section-space px-6 bg-light-gray">
+    <section id="cron" class="section-space px-6 bg-white border-b border-slate-100">
         <div class="container mx-auto max-w-7xl">
             <div class="grid lg:grid-cols-12 gap-16 items-start">
                 <div class="lg:col-span-7">
@@ -421,103 +277,121 @@
                     <p class="text-xl text-slate-600 font-light leading-relaxed max-w-3xl">
                         A tecnologia que ancora nossa Engenharia Econômica, monitorando o consumo do tempo e garantindo a convergência entre todos os setores da obra.
                     </p>
-                    <div class="mt-10">
-                        <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99z"/></svg>
-                            Quero conhecer o Sistema CRON
-                        </a>
-                    </div>
                 </div>
+                
                 <div class="lg:col-span-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="stat-card"><div class="stat-number">50+</div><div class="stat-label">Obras.<br>Experiência acumulada em cogestão técnica.</div></div>
-                        <div class="stat-card"><div class="stat-number">20+</div><div class="stat-label">Anos.<br>Know-how em mercado de engenharia e incorporação.</div></div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Obras.<br>Experiência acumulada em cogestão técnica.</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Anos.<br>Know-how em mercado de engenharia e incorporação.</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO DASHBOARD - Fundo navy com gradiente -->
-    <section id="dashboard" class="section-space px-6" style="background: linear-gradient(135deg, var(--ciclo-navy) 0%, #0F1E2E 100%);">
+    <section id="dashboard" class="section-space px-6 bg-slate-50">
         <div class="container mx-auto max-w-7xl text-center">
             <div class="mb-16">
-                <span class="text-sm font-bold uppercase tracking-[0.4em] text-green-400 block mb-3">Transparência e Controle</span>
-                <h2 class="serif text-5xl md:text-6xl italic text-white leading-tight">Dashboard de Cogestão</h2>
+                <span class="text-sm font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Transparência e Controle</span>
+                <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Dashboard de Cogestão</h2>
             </div>
-            <div class="dashboard-container">
-                <div class="bg-white p-3 rounded-xl shadow-2xl">
-                    <iframe src="./DASHBOARD.pdf#view=FitH" width="100%" height="700px" class="rounded-lg border border-slate-200"></iframe>
-                </div>
-            </div>
-            <div class="mt-10">
-                <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp" style="background: white; color: var(--ciclo-green);">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: var(--ciclo-green);"><path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99z"/></svg>
-                    Quero esse Dashboard
-                </a>
+            <div class="bg-white p-3 shadow-2xl rounded-xl border border-slate-200">
+                <iframe src="./DASHBOARD.pdf#view=FitH" width="100%" height="700px" class="rounded-lg border border-slate-100"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE NÓS - Fundo creme -->
-    <section id="sobre" class="section-space px-6 bg-cream">
+    <section id="sobre" class="section-space px-6 bg-white border-t border-slate-100">
         <div class="container mx-auto max-w-7xl">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-5 relative group flex justify-center">
-                    <div class="absolute -inset-6 bg-white/50 rounded-[2rem] -z-10 group-hover:bg-green-50 transition duration-700"></div>
-                    <img src="./image.png" alt="George Berliner" class="george-image rounded-2xl shadow-2xl object-cover aspect-[4/5]">
+            <div class="grid lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5 relative group">
+                    <div class="absolute -inset-6 bg-slate-100 rounded-[2rem] -z-10 group-hover:bg-green-50 transition duration-700"></div>
+                    <img src="./image.png" alt="George Berliner" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]">
                 </div>
+                
                 <div class="lg:col-span-7 space-y-8">
-                    <div><span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Sobre Nós</span><h2 class="serif text-6xl md:text-7xl text-slate-900 leading-none">George Berliner</h2></div>
-                    <div class="citation-role">Fundador e Diretor Geral da CICLO Engenharia</div>
-                    <div class="citation-main">"Transformamos o tempo em previsibilidade financeira, unificando os setores da obra sob a meta inegociável do CTO."</div>
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Sobre Nós</span>
+                        <h2 class="serif text-6xl md:text-7xl text-slate-900 leading-none">George Berliner</h2>
+                    </div>
+                    
+                    <div class="citation-role">
+                        Fundador e Diretor Geral da CICLO Engenharia
+                    </div>
+                    
+                    <div class="citation-main">
+                        "Transformamos o tempo em previsibilidade financeira, unificando os setores da obra sob a meta inegociável do CTO."
+                    </div>
+                    
                     <button onclick="abrirModal()" class="group relative inline-flex items-center gap-3 border-2 border-slate-900 px-10 py-5 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all duration-300 rounded transform hover:-translate-y-1 overflow-hidden">
                         <span class="relative z-10">Acessar Trajetória Profissional</span>
-                        <svg class="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        <svg class="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO NOSSOS CLIENTES - Fundo white -->
-    <section id="clientes" class="section-space px-6 bg-white">
-        <div class="container mx-auto max-w-7xl">
-            <div class="text-center mb-16">
-                <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Parceiros Estratégicos</span>
-                <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Nossos Clientes</h2>
-                <div class="w-20 h-1 bg-green-700 mx-auto mt-6"></div>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4 mb-20">
-                <span class="client-tag">Construtoras</span>
-                <span class="client-tag">Incorporadoras</span>
-                <span class="client-tag">Investidores</span>
-                <span class="client-tag">Fundos de Investimentos</span>
-            </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12"><h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">O que nossos clientes recebem</h3><div class="w-16 h-0.5 bg-green-700 mx-auto"></div></div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                    <div class="benefit-item">Prazo</div><div class="benefit-item">Custo</div><div class="benefit-item">Qualidade</div><div class="benefit-item">Controle</div>
-                    <div class="benefit-item">Previsibilidade</div><div class="benefit-item">Rentabilidade</div><div class="benefit-item">Reputação</div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99z"/></svg>
-                        Quero ser cliente
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MODAL -->
+    <!-- MODAL DE TRAJETÓRIA PROFISSIONAL - VERSÃO COMPLETA COM BOLINHAS, DESTAQUES E LAYOUT DIFERENCIADO -->
     <div id="modal-trajetoria" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
         <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" onclick="fecharModal()"></div>
-        <div class="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 p-10 shadow-2xl border border-slate-100">
-            <button onclick="fecharModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-3xl font-bold transition-colors">&times;</button>
-            <h3 class="serif text-4xl md:text-5xl italic mb-8 text-slate-900">Histórico de Autoridade Executiva</h3>
-            <div class="mb-10"><h4 class="modal-section-title">Formação Acadêmica</h4><ul class="academic-list"><li>Engenharia Civil: Graduado.</li><li>FGV: Pós em Avaliação de Empresas e Projetos.</li><li>PUC/RJ: Mestre em Ciência da Computação (IA).</li><li>IAG-PUC/RJ: Docente na Área de Computação.</li></ul></div>
-            <div><h4 class="modal-section-title">Trajetória Executiva</h4><ul class="timeline-list"><li>Caixa Econômica Federal (Desde 1978): Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</li><li>BEZON Engenharia & INVERRIO (1993–2014): Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</li><li>Edge Engenharia (2015–2022): Fundador e Diretor Geral.</li><li>Artha Construções (2022–2025): Gestão Financeira, Econômica e de Suprimentos focada no atingimento do CTO.</li></ul></div>
+        <div class="bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 p-12 shadow-2xl border border-slate-100">
+            <button onclick="fecharModal()" class="absolute top-8 right-8 text-slate-400 hover:text-slate-900 text-3xl font-bold transition-colors">&times;</button>
+            
+            <h3 class="serif text-4xl md:text-5xl italic mb-12 text-slate-900 border-b-2 pb-6 border-slate-100">Histórico de Autoridade Executiva</h3>
+            
+            <!-- Formação Acadêmica -->
+            <div class="mb-16">
+                <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-green-700 mb-8">Formação Acadêmica</h4>
+                <ul class="space-y-4 text-slate-700 text-sm max-w-2xl">
+                    <li><strong class="text-slate-900">Engenharia Civil:</strong> Graduado.</li>
+                    <li><strong class="text-slate-900">FGV:</strong> Pós em Avaliação de Empresas e Projetos.</li>
+                    <li><strong class="text-slate-900">PUC/RJ:</strong> Mestre em Ciência da Computação (IA).</li>
+                    <li><strong class="text-slate-900">IAG-PUC/RJ:</strong> Docente na Área de Computação.</li>
+                </ul>
+            </div>
+
+            <!-- Trajetória Executiva com Timeline e Bolinhas -->
+            <div class="space-y-0 relative">
+                <h4 class="text-[11px] font-black uppercase tracking-[0.3em] text-green-700 mb-10">Trajetória Executiva</h4>
+                <div class="space-y-0 timeline-container">
+                    
+                    <div class="pb-16 relative">
+                        <div class="timeline-dot highlight"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">Caixa Econômica Federal (Desde 1978)</h5>
+                        <p class="text-sm text-slate-600 mt-2">Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</p>
+                    </div>
+
+                    <div class="pb-16 relative">
+                        <div class="timeline-dot"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">BEZON Engenharia & INVERRIO (1993–2014)</h5>
+                        <p class="text-sm text-slate-600 mt-2">Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</p>
+                    </div>
+
+                    <div class="pb-16 relative">
+                        <div class="timeline-dot"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter">Edge Engenharia (2015–2022)</h5>
+                        <p class="text-sm text-slate-600 mt-2">Fundador e Diretor Geral.</p>
+                    </div>
+
+                    <div class="pb-6 relative">
+                        <div class="timeline-dot highlight"></div>
+                        <h5 class="font-bold text-slate-900 text-xl uppercase tracking-tighter italic">Artha Construções (2022–2025)</h5>
+                        <p class="text-sm text-slate-600 mt-2 p-5 bg-green-50 rounded-xl border border-green-100">
+                            Gestão Financeira, Econômica e de Suprimentos focada no atingimento do CTO.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -526,18 +400,29 @@
         <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
             <h2 class="serif text-5xl md:text-6xl italic mb-16 text-slate-300">O CTO é o único destino inegociável.</h2>
             <div class="flex flex-col items-center gap-12">
-                <a href="https://wa.me/5521988117150" target="_blank" class="btn-cta text-sm px-20 transform hover:scale-105 rounded-2xl shadow-xl shadow-green-900/30">QUERO ASSEGURAR O ATINGIMENTO DO CTO DA MINHA OBRA</a>
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-cta text-sm px-20 transform hover:scale-105 rounded-2xl shadow-xl shadow-green-900/30">
+                    QUERO ASSEGURAR O ATINGIMENTO DO CTO DA MINHA OBRA
+                </a>
                 <div class="pt-24 border-t border-white/5 w-full flex flex-col md:flex-row justify-between gap-10 opacity-30 items-center">
                     <span class="text-[9px] font-black uppercase tracking-[0.4em]">CICLO Engenharia Econômica © 2026</span>
-                    <div class="flex gap-10"><span class="text-[9px] font-black uppercase tracking-[0.4em]">Gestão Técnica</span><span class="text-[9px] font-black uppercase tracking-[0.4em]">Sistema CRON</span></div>
+                    <div class="flex gap-10">
+                        <span class="text-[9px] font-black uppercase tracking-[0.4em]">Gestão Técnica</span>
+                        <span class="text-[9px] font-black uppercase tracking-[0.4em]">Sistema CRON</span>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
     <script>
-        function abrirModal() { document.getElementById('modal-trajetoria').classList.remove('hidden'); document.body.classList.add('modal-open'); }
-        function fecharModal() { document.getElementById('modal-trajetoria').classList.add('hidden'); document.body.classList.remove('modal-open'); }
+        function abrirModal() {
+            document.getElementById('modal-trajetoria').classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+        function fecharModal() {
+            document.getElementById('modal-trajetoria').classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
     </script>
 </body>
 </html>
