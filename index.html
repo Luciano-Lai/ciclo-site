@@ -32,33 +32,82 @@
             letter-spacing: 0.1em; transition: all 0.3s ease; display: inline-block;
         }
         .btn-cta:hover { background: #356004; transform: translateY(-2px); }
-
-        /* Botão WhatsApp flutuante */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 100;
-            background-color: #25D366;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        
+        /* Botão padrão para WhatsApp em todas as seções */
+        .btn-whatsapp {
+            background: var(--ciclo-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
         }
         
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        .btn-whatsapp:hover {
+            background: #356004;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(65, 117, 5, 0.3);
         }
         
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
+        .btn-whatsapp-outline {
+            background: transparent;
+            color: var(--ciclo-green);
+            border: 2px solid var(--ciclo-green);
+            padding: 0.875rem 1.875rem;
+        }
+        
+        .btn-whatsapp-outline:hover {
+            background: var(--ciclo-green);
+            color: white;
+        }
+        
+        /* Botão do header */
+        .btn-whatsapp-header {
+            background: var(--ciclo-green);
+            color: white;
+            padding: 0.6rem 1.25rem;
+            border-radius: 2rem;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .btn-whatsapp-header:hover {
+            background: #356004;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(65, 117, 5, 0.3);
+        }
+        
+        /* Menu de navegação com fonte maior */
+        .nav-link {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+        }
+        
+        @media (min-width: 1024px) {
+            .nav-link {
+                font-size: 0.8rem;
+            }
         }
 
         /* UNIFORMIDADE ABSOLUTA DAS CAIXAS - TODAS IGUAIS */
@@ -165,7 +214,7 @@
             }
         }
 
-        /* MODAL UNIFORME - SEM DIFERENCIAÇÃO ENTRE ITENS */
+        /* ESTILOS UNIFORMES PARA O MODAL */
         .modal-section-title {
             font-size: 0.7rem;
             font-weight: 800;
@@ -177,75 +226,225 @@
             border-bottom: 1px solid #e2e8f0;
         }
         
-        .uniform-list {
+        .academic-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
         
-        .uniform-list li {
+        .academic-list li {
             font-size: 0.875rem;
             line-height: 1.6;
             color: #334155;
-            padding: 0.75rem 0;
+            padding: 0.5rem 0;
             border-bottom: 1px solid #f1f5f9;
         }
         
-        .uniform-list li:last-child {
+        .academic-list li:last-child {
             border-bottom: none;
         }
         
-        /* Remove qualquer negrito ou itálico interno */
-        .uniform-list li strong,
-        .uniform-list li em,
-        .uniform-list li b {
-            font-weight: normal;
-            font-style: normal;
-            color: #334155;
+        .timeline-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
         
-        .btn-whatsapp-header {
-            background-color: #25D366;
-            padding: 8px 20px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+        .timeline-list li {
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #334155;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        
+        .timeline-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .george-image {
+            max-width: 85%;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 1024px) {
+            .george-image {
+                max-width: 90%;
+            }
+        }
+        
+        .client-tag {
+            background: #f1f5f9;
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--ciclo-navy);
             transition: all 0.3s ease;
         }
         
-        .btn-whatsapp-header:hover {
-            background-color: #128C7E;
+        .client-tag:hover {
+            background: var(--ciclo-green);
+            color: white;
             transform: translateY(-2px);
+        }
+        
+        .benefit-item {
+            background: #f8fafc;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--ciclo-navy);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            border-color: var(--ciclo-green);
+            background: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Menu Sanduíche - Mobile */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 60;
+        }
+        
+        .mobile-menu-btn span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 3px;
+        }
+        
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 320px;
+            height: 100vh;
+            background: var(--ciclo-navy);
+            z-index: 55;
+            padding: 80px 30px 30px;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+        }
+        
+        .mobile-menu.open {
+            right: 0;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 0;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .mobile-menu .btn-whatsapp-header {
+            display: inline-flex;
+            margin-top: 20px;
+            background: var(--ciclo-green);
+            justify-content: center;
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 54;
+            display: none;
+        }
+        
+        .overlay.active {
+            display: block;
+        }
+        
+        @media (max-width: 1023px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            nav.hidden.lg\:flex {
+                display: none !important;
+            }
+            .btn-whatsapp-header.hidden.lg\:flex {
+                display: none !important;
+            }
         }
     </style>
 </head>
 <body id="head" class="antialiased">
 
-    <header class="fixed w-full z-50 bg-navy-corporate py-4 shadow-xl">
+    <header class="fixed w-full z-50 bg-navy-corporate py-3 shadow-xl">
         <div class="container mx-auto px-6 flex justify-between items-center">
             <div class="logo-box">
                 <img src="./CICLO ENGENHARIA LOGO.png" alt="CICLO ENGENHARIA" class="max-h-full w-auto">
             </div>
             <nav class="hidden lg:flex gap-8 items-center">
-                <a href="#head" class="text-[10px] font-bold uppercase tracking-widest text-white hover:text-green-500">Home</a>
-                <a href="#ciclo" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">O Ciclo</a>
-                <a href="#metodologia" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Metodologia</a>
-                <a href="#cron" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sistema CRON</a>
-                <a href="#dashboard" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Dashboard</a>
-                <a href="#sobre" class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-white">Sobre Nós</a>
+                <a href="#head" class="nav-link text-white hover:text-green-500">Home</a>
+                <a href="#ciclo" class="nav-link text-slate-400 hover:text-white">O Ciclo</a>
+                <a href="#metodologia" class="nav-link text-slate-400 hover:text-white">Metodologia</a>
+                <a href="#cron" class="nav-link text-slate-400 hover:text-white">Sistema CRON</a>
+                <a href="#dashboard" class="nav-link text-slate-400 hover:text-white">Dashboard</a>
+                <a href="#sobre" class="nav-link text-slate-400 hover:text-white">Sobre Nós</a>
+                <a href="#clientes" class="nav-link text-slate-400 hover:text-white">Nossos Clientes</a>
             </nav>
-            <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp-header hidden lg:flex text-white text-xs font-bold uppercase tracking-wider">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.032 2.001c-5.52 0-10 4.48-10 10 0 1.79.47 3.54 1.36 5.07l-1.37 4.45 4.62-1.25c1.48.86 3.16 1.32 4.89 1.32 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.54 0-3.04-.4-4.36-1.16l-.31-.18-2.74.74.76-2.66-.2-.33c-.82-1.32-1.25-2.83-1.25-4.41 0-4.59 3.74-8.33 8.33-8.33s8.33 3.74 8.33 8.33-3.74 8.33-8.33 8.33z"/>
-                    <path d="M16.54 13.62c-.26-.13-1.53-.75-1.77-.84-.23-.09-.4-.13-.57.13-.17.26-.66.84-.81 1.01-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.07-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.13.26-.34.39-.51.13-.17.17-.29.26-.48.09-.19.04-.36-.02-.5-.06-.13-.57-1.36-.78-1.86-.2-.48-.41-.41-.57-.42-.14-.01-.3-.01-.47-.01-.17 0-.44.06-.67.3-.23.24-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.44.52.6.19 1.15.16 1.58.1.48-.07 1.53-.62 1.74-1.22.21-.6.21-1.12.15-1.23-.06-.11-.23-.17-.49-.3z"/>
+            <!-- Botão WhatsApp no header (desktop) -->
+            <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp-header hidden lg:flex">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
                 </svg>
-                FALE CONOSCO
+                Entrar em Contato
             </a>
+            <!-- Botão menu sanduíche mobile -->
+            <button class="mobile-menu-btn" id="menuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <!-- Conteúdo principal (idêntico ao anterior, já corrigido) -->
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Menu Mobile -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#head">Home</a>
+        <a href="#ciclo">O Ciclo</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="#cron">Sistema CRON</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#clientes">Nossos Clientes</a>
+        <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp-header" style="display: inline-flex; margin-top: 20px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+            </svg>
+            Entrar em Contato
+        </a>
+    </div>
+
+    <!-- SEÇÃO HERO COM BOTÃO -->
     <section class="pt-48 pb-24 px-6 bg-slate-50 relative overflow-hidden">
         <div class="container mx-auto max-w-5xl relative z-10">
             <h1 class="font-extrabold text-4xl md:text-6xl text-slate-900 leading-tight mb-12 tracking-tight">
@@ -253,11 +452,30 @@
                 A falta desse recurso é o que mais impacta em uma obra.
             </h1>
             <div class="space-y-10 text-2xl md:text-3xl text-slate-700 font-light leading-relaxed max-w-4xl">
-                <p>De nada adianta o <strong>suprimentos</strong> comprar barato se não houver <strong>logística</strong>. De nada adianta a <strong>obra</strong> querer pressa gastando rios de dinheiro com improviso e baixa produtividade.</p>
-                <p class="font-medium text-slate-900">Enquanto cada setor puxa para um lado, o lucro morre no meio do caminho.</p>
+                <p>
+                    De nada adianta o <strong>suprimentos</strong> comprar barato se não houver <strong>logística</strong>. 
+                    De nada adianta a <strong>obra</strong> querer pressa gastando rios de dinheiro com improviso e baixa produtividade.
+                </p>
+                <p class="font-medium text-slate-900">
+                    Enquanto cada setor puxa para um lado, o lucro morre no meio do caminho.
+                </p>
                 <div class="h-1.5 w-24 bg-green-700 my-12"></div>
-                <p>Na <strong>CICLO</strong>, a <strong>Engenharia Econômica</strong> faz todos falarem a mesma língua: o <strong>CTO (Custo Total da Obra)</strong>.</p>
-                <p class="text-slate-500 italic">O tempo não é o vilão — ele é o recurso que revela quem realmente está focado no resultado. A CICLO entende que o <strong>CTO é inegociável</strong>.</p>
+                <p>
+                    Na <strong>CICLO</strong>, a <strong>Engenharia Econômica</strong> faz todos falarem a mesma língua: o <strong>CTO (Custo Total da Obra)</strong>.
+                </p>
+                <p class="text-slate-500 italic">
+                    O tempo não é o vilão — ele é o recurso que revela quem realmente está focado no resultado. 
+                    A CICLO entende que o <strong>CTO é inegociável</strong>.
+                </p>
+            </div>
+            <!-- Botão Hero -->
+            <div class="mt-12">
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                    </svg>
+                    Quero saber mais sobre Engenharia Econômica
+                </a>
             </div>
         </div>
     </section>
@@ -269,10 +487,29 @@
                 <h2 class="serif text-5xl md:text-6xl italic text-slate-900">O Ciclo do Empreendimento</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="ciclo-card"><span class="card-number">01</span><h4>Estudo e Viabilidade</h4><p>Onde a meta do CTO nasce e o lucro é projetado.</p></div>
-                <div class="ciclo-card"><span class="card-number">02</span><h4>Planejamento Técnico</h4><p>Transformando tempo e logística em estratégia financeira.</p></div>
-                <div class="ciclo-card"><span class="card-number">03</span><h4>Execução e Cogestão</h4><p>Foco total no atingimento do CTO através do controle proativo.</p></div>
-                <div class="ciclo-card"><span class="card-number">04</span><h4>Entrega do Ativo</h4><p>A concretização do lucro real e da qualidade técnica.</p></div>
+                <div class="ciclo-card">
+                    <span class="card-number">01</span>
+                    <h4>Estudo e Viabilidade</h4>
+                    <p>Onde a meta do CTO nasce e o lucro é projetado.</p>
+                </div>
+                
+                <div class="ciclo-card">
+                    <span class="card-number">02</span>
+                    <h4>Planejamento Técnico</h4>
+                    <p>Transformando tempo e logística em estratégia financeira.</p>
+                </div>
+                
+                <div class="ciclo-card">
+                    <span class="card-number">03</span>
+                    <h4>Execução e Cogestão</h4>
+                    <p>Foco total no atingimento do CTO através do controle proativo.</p>
+                </div>
+                
+                <div class="ciclo-card">
+                    <span class="card-number">04</span>
+                    <h4>Entrega do Ativo</h4>
+                    <p>A concretização do lucro real e da qualidade técnica.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -281,10 +518,22 @@
         <div class="container mx-auto px-6 md:px-12 max-w-7xl">
             <h2 class="serif text-6xl md:text-8xl mb-16 leading-none">O Ciclo <br><span class="italic text-green-500">PDCA</span></h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 max-w-5xl">
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">P</h3><p class="text-slate-200 leading-relaxed"><strong>Planejar:</strong> Planos de ação para o atingimento do CTO em curto, médio e longo prazo e identificação dos caminho crítico.</p></div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">D</h3><p class="text-slate-200 leading-relaxed"><strong>Executar:</strong> Coordenação integrada entre planejamento, orçamento, suprimentos, logística e a produção física na obra.</p></div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">C</h3><p class="text-slate-200 leading-relaxed"><strong>Checar:</strong> Auditoria constante através de indicadores monitorados pelo Sistema CRON.</p></div>
-                <div class="p-10 bg-white/5 border border-white/10 rounded-xl"><h3 class="font-black text-4xl text-green-500 mb-4">A</h3><p class="text-slate-200 leading-relaxed"><strong>Agir:</strong> Correção proativa de rumos para neutralizar desvios antes que impactem a viabilidade.</p></div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">P</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Planejar:</strong> Planos de ação para o atingimento do CTO em curto, médio e longo prazo e identificação dos caminho crítico.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">D</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Executar:</strong> Coordenação integrada entre planejamento, orçamento, suprimentos, logística e a produção física na obra.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">C</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Checar:</strong> Auditoria constante através de indicadores monitorados pelo Sistema CRON.</p>
+                </div>
+                <div class="p-10 bg-white/5 border border-white/10 rounded-xl">
+                    <h3 class="font-black text-4xl text-green-500 mb-4">A</h3>
+                    <p class="text-slate-200 leading-relaxed"><strong>Agir:</strong> Correção proativa de rumos para neutralizar desvios antes que impactem a viabilidade.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -297,12 +546,31 @@
                         <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-2">Tecnologia Proprietária</span>
                         <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Sistema CRON</h2>
                     </div>
-                    <p class="text-xl text-slate-600 font-light leading-relaxed max-w-3xl">A tecnologia que ancora nossa Engenharia Econômica, monitorando o consumo do tempo e garantindo a convergência entre todos os setores da obra.</p>
+                    <p class="text-xl text-slate-600 font-light leading-relaxed max-w-3xl">
+                        A tecnologia que ancora nossa Engenharia Econômica, monitorando o consumo do tempo e garantindo a convergência entre todos os setores da obra.
+                    </p>
+                    <!-- Botão Sistema CRON -->
+                    <div class="mt-10">
+                        <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                            </svg>
+                            Quero conhecer o Sistema CRON
+                        </a>
+                    </div>
                 </div>
+                
                 <div class="lg:col-span-5">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="stat-card"><div class="stat-number">50+</div><div class="stat-label">Obras.<br>Experiência acumulada em cogestão técnica.</div></div>
-                        <div class="stat-card"><div class="stat-number">20+</div><div class="stat-label">Anos.<br>Know-how em mercado de engenharia e incorporação.</div></div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Obras.<br>Experiência acumulada em cogestão técnica.</div>
+                        </div>
+                        
+                        <div class="stat-card">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">Anos.<br>Know-how em mercado de engenharia e incorporação.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,39 +579,128 @@
 
     <section id="dashboard" class="section-space px-6 bg-slate-50">
         <div class="container mx-auto max-w-7xl text-center">
-            <div class="mb-16"><span class="text-sm font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Transparência e Controle</span><h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Dashboard de Cogestão</h2></div>
-            <div class="bg-white p-3 shadow-2xl rounded-xl border border-slate-200"><iframe src="./DASHBOARD.pdf#view=FitH" width="100%" height="700px" class="rounded-lg border border-slate-100"></iframe></div>
+            <div class="mb-16">
+                <span class="text-sm font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Transparência e Controle</span>
+                <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Dashboard de Cogestão</h2>
+            </div>
+            <div class="bg-white p-3 shadow-2xl rounded-xl border border-slate-200">
+                <!-- ALTERAÇÃO: PDF responsivo - no mobile mostra link, no desktop mostra iframe -->
+                <div class="pdf-container">
+                    <iframe src="./DASHBOARD.pdf#view=FitH" width="100%" height="700px" class="rounded-lg border border-slate-100 hidden md:block"></iframe>
+                    <div class="block md:hidden text-center p-8 bg-slate-50 rounded-lg">
+                        <svg class="w-16 h-16 mx-auto text-slate-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <p class="text-slate-600 mb-4">Visualize o Dashboard completo clicando no botão abaixo:</p>
+                        <a href="./DASHBOARD.pdf" target="_blank" class="btn-whatsapp inline-flex" style="background: var(--ciclo-navy);">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            Abrir Dashboard (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão Dashboard -->
+            <div class="mt-10">
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                    </svg>
+                    Quero esse Dashboard
+                </a>
+            </div>
         </div>
     </section>
 
     <section id="sobre" class="section-space px-6 bg-white border-t border-slate-100">
         <div class="container mx-auto max-w-7xl">
-            <div class="grid lg:grid-cols-12 gap-16 items-center">
-                <div class="lg:col-span-5 relative group">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 relative group flex justify-center">
                     <div class="absolute -inset-6 bg-slate-100 rounded-[2rem] -z-10 group-hover:bg-green-50 transition duration-700"></div>
-                    <img src="./image.png" alt="George Berliner" class="rounded-2xl shadow-2xl w-full object-cover aspect-[4/5]">
+                    <img src="./image.png" alt="George Berliner" class="george-image rounded-2xl shadow-2xl object-cover aspect-[4/5]">
                 </div>
+                
                 <div class="lg:col-span-7 space-y-8">
-                    <div><span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Sobre Nós</span><h2 class="serif text-6xl md:text-7xl text-slate-900 leading-none">George Berliner</h2></div>
-                    <div class="citation-role">Fundador e Diretor Geral da CICLO Engenharia</div>
-                    <div class="citation-main">"Transformamos o tempo em previsibilidade financeira, unificando os setores da obra sob a meta inegociável do CTO."</div>
-                    <button onclick="abrirModal()" class="group relative inline-flex items-center gap-3 border-2 border-slate-900 px-10 py-5 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all duration-300 rounded transform hover:-translate-y-1">Acessar Trajetória Profissional</button>
+                    <div>
+                        <span class="text-xs font-bold tracking-[0.5em] text-green-700 uppercase mb-3 block">Sobre Nós</span>
+                        <h2 class="serif text-6xl md:text-7xl text-slate-900 leading-none">George Berliner</h2>
+                    </div>
+                    
+                    <div class="citation-role">
+                        Fundador e Diretor Geral da CICLO Engenharia
+                    </div>
+                    
+                    <div class="citation-main">
+                        "Transformamos o tempo em previsibilidade financeira, unificando os setores da obra sob a meta inegociável do CTO."
+                    </div>
+                    
+                    <button onclick="abrirModal()" class="group relative inline-flex items-center gap-3 border-2 border-slate-900 px-10 py-5 text-xs font-black uppercase tracking-[0.2em] hover:bg-slate-900 hover:text-white transition-all duration-300 rounded transform hover:-translate-y-1 overflow-hidden">
+                        <span class="relative z-10">Acessar Trajetória Profissional</span>
+                        <svg class="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- MODAL TOTALMENTE UNIFORME - SEM DIFERENCIAÇÃO ENTRE ITENS -->
+    <!-- SEÇÃO NOSSOS CLIENTES -->
+    <section id="clientes" class="section-space px-6 bg-slate-50">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.4em] text-green-700 block mb-3">Parceiros Estratégicos</span>
+                <h2 class="serif text-5xl md:text-6xl italic text-slate-900 leading-tight">Nossos Clientes</h2>
+                <div class="w-20 h-1 bg-green-700 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-20">
+                <span class="client-tag">Construtoras</span>
+                <span class="client-tag">Incorporadoras</span>
+                <span class="client-tag">Investidores</span>
+                <span class="client-tag">Fundos de Investimentos</span>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">O que nossos clientes recebem</h3>
+                    <div class="w-16 h-0.5 bg-green-700 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+                    <div class="benefit-item">Prazo</div>
+                    <div class="benefit-item">Custo</div>
+                    <div class="benefit-item">Qualidade</div>
+                    <div class="benefit-item">Controle</div>
+                    <div class="benefit-item">Previsibilidade</div>
+                    <div class="benefit-item">Rentabilidade</div>
+                    <div class="benefit-item">Reputação</div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="https://wa.me/5521988117150" target="_blank" class="btn-whatsapp">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12.032 2.003c-5.514 0-9.99 4.476-9.99 9.99 0 1.75.455 3.476 1.31 4.99L2 22l5.454-1.492c1.448.78 3.07 1.19 4.71 1.19 5.513 0 9.99-4.476 9.99-9.99 0-5.513-4.477-9.99-9.99-9.99zm0 18.38c-1.488 0-2.94-.4-4.2-1.15l-.3-.18-3.23.88.88-3.14-.2-.3c-.84-1.33-1.28-2.84-1.28-4.38 0-4.62 3.76-8.38 8.38-8.38 4.62 0 8.38 3.76 8.38 8.38 0 4.62-3.76 8.38-8.38 8.38z"/>
+                        </svg>
+                        Quero ser cliente
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE TRAJETÓRIA PROFISSIONAL -->
     <div id="modal-trajetoria" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-6">
         <div class="absolute inset-0 bg-slate-900/95 backdrop-blur-sm" onclick="fecharModal()"></div>
         <div class="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl relative z-10 p-10 shadow-2xl border border-slate-100">
-            <button onclick="fecharModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-3xl font-bold">&times;</button>
+            <button onclick="fecharModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-3xl font-bold transition-colors">&times;</button>
+            
             <h3 class="serif text-4xl md:text-5xl italic mb-8 text-slate-900">Histórico de Autoridade Executiva</h3>
             
-            <!-- Formação Acadêmica uniforme -->
             <div class="mb-10">
                 <h4 class="modal-section-title">Formação Acadêmica</h4>
-                <ul class="uniform-list">
+                <ul class="academic-list">
                     <li>Engenharia Civil: Graduado.</li>
                     <li>FGV: Pós em Avaliação de Empresas e Projetos.</li>
                     <li>PUC/RJ: Mestre em Ciência da Computação (IA).</li>
@@ -351,10 +708,9 @@
                 </ul>
             </div>
 
-            <!-- Trajetória Executiva uniforme - sem bolinhas, sem cores diferentes -->
             <div>
                 <h4 class="modal-section-title">Trajetória Executiva</h4>
-                <ul class="uniform-list">
+                <ul class="timeline-list">
                     <li>Caixa Econômica Federal (Desde 1978): Diretor Nacional de TI, Chefe de Engenharia RJ e Gerente Regional RJ/ES.</li>
                     <li>BEZON Engenharia & INVERRIO (1993–2014): Fundador e Diretor Geral. Execução e incorporação de dezenas de empreendimentos de alto padrão.</li>
                     <li>Edge Engenharia (2015–2022): Fundador e Diretor Geral.</li>
@@ -364,17 +720,12 @@
         </div>
     </div>
 
-    <!-- Rodapé com WhatsApp -->
     <footer class="py-40 bg-navy-corporate text-white text-center relative overflow-hidden">
         <div class="absolute left-0 bottom-0 w-full h-1 bg-green-700"></div>
         <div class="container mx-auto px-6 max-w-5xl text-center relative z-10">
             <h2 class="serif text-5xl md:text-6xl italic mb-16 text-slate-300">O CTO é o único destino inegociável.</h2>
             <div class="flex flex-col items-center gap-12">
-                <a href="https://wa.me/5521988117150" target="_blank" class="btn-cta text-sm px-20 transform hover:scale-105 rounded-2xl shadow-xl shadow-green-900/30 flex items-center gap-3">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.032 2.001c-5.52 0-10 4.48-10 10 0 1.79.47 3.54 1.36 5.07l-1.37 4.45 4.62-1.25c1.48.86 3.16 1.32 4.89 1.32 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.54 0-3.04-.4-4.36-1.16l-.31-.18-2.74.74.76-2.66-.2-.33c-.82-1.32-1.25-2.83-1.25-4.41 0-4.59 3.74-8.33 8.33-8.33s8.33 3.74 8.33 8.33-3.74 8.33-8.33 8.33z"/>
-                        <path d="M16.54 13.62c-.26-.13-1.53-.75-1.77-.84-.23-.09-.4-.13-.57.13-.17.26-.66.84-.81 1.01-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.07-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.13.26-.34.39-.51.13-.17.17-.29.26-.48.09-.19.04-.36-.02-.5-.06-.13-.57-1.36-.78-1.86-.2-.48-.41-.41-.57-.42-.14-.01-.3-.01-.47-.01-.17 0-.44.06-.67.3-.23.24-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.44.52.6.19 1.15.16 1.58.1.48-.07 1.53-.62 1.74-1.22.21-.6.21-1.12.15-1.23-.06-.11-.23-.17-.49-.3z"/>
-                    </svg>
+                <a href="https://wa.me/5521988117150" target="_blank" class="btn-cta text-sm px-20 transform hover:scale-105 rounded-2xl shadow-xl shadow-green-900/30">
                     QUERO ASSEGURAR O ATINGIMENTO DO CTO DA MINHA OBRA
                 </a>
                 <div class="pt-24 border-t border-white/5 w-full flex flex-col md:flex-row justify-between gap-10 opacity-30 items-center">
@@ -388,15 +739,30 @@
         </div>
     </footer>
 
-    <!-- Botão WhatsApp flutuante -->
-    <a href="https://wa.me/5521988117150" target="_blank" class="whatsapp-float">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12.032 2.001c-5.52 0-10 4.48-10 10 0 1.79.47 3.54 1.36 5.07l-1.37 4.45 4.62-1.25c1.48.86 3.16 1.32 4.89 1.32 5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18c-1.54 0-3.04-.4-4.36-1.16l-.31-.18-2.74.74.76-2.66-.2-.33c-.82-1.32-1.25-2.83-1.25-4.41 0-4.59 3.74-8.33 8.33-8.33s8.33 3.74 8.33 8.33-3.74 8.33-8.33 8.33z"/>
-            <path d="M16.54 13.62c-.26-.13-1.53-.75-1.77-.84-.23-.09-.4-.13-.57.13-.17.26-.66.84-.81 1.01-.15.17-.3.19-.56.06-.26-.13-1.09-.4-2.07-1.28-.77-.69-1.29-1.54-1.44-1.8-.15-.26-.02-.4.11-.53.12-.13.26-.34.39-.51.13-.17.17-.29.26-.48.09-.19.04-.36-.02-.5-.06-.13-.57-1.36-.78-1.86-.2-.48-.41-.41-.57-.42-.14-.01-.3-.01-.47-.01-.17 0-.44.06-.67.3-.23.24-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.44.52.6.19 1.15.16 1.58.1.48-.07 1.53-.62 1.74-1.22.21-.6.21-1.12.15-1.23-.06-.11-.23-.17-.49-.3z"/>
-        </svg>
-    </a>
-
     <script>
+        // Menu sanduíche
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('overlay');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('open');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        }
+        
+        menuBtn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('open');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+        
         function abrirModal() {
             document.getElementById('modal-trajetoria').classList.remove('hidden');
             document.body.classList.add('modal-open');
